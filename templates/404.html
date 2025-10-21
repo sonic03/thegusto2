@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta name="description" content="404 not found" />
+  <meta charset="utf-8">
+  <title>404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<style>
+    .img_out{position: relative;}
+    .img_out .textArea{
+        position:absolute;
+        width: 100%;
+        text-align: center;
+        top:60%;
+    }
+    h1,p{
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+  
+<div class="container">
+  <div class="row">
+    <div class="img_out">
+        <img src="{% static 'img/404.png' %}" alt="">
+        <div class="textArea">
+            <h1>Sayfa Bulunamıyor</h1><br>
+        <p> Ana sayfaya yönlendiriliyorsunuz...</p>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        
+        setTimeout(function(){window.location.href = '{% url "index" %}'},3000)
+    
+    })
+</script>
+
+</body>
+</html>

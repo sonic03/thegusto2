@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Blog Yazılarımız | The Gusto
+{% endblock %}
+
+{% block body %}
+<div class="marka-container"> 
+        <div class="container mt-3" id="test-list">
+            <div class="row">
+                <div class="col-md-3 mb-3" style="color: #a3a3a3; font-size: 12px;">
+                    Ana Sayfa &gt; Blog
+                </div>
+            </div>
+        </div> 
+                </div>
+  
+        {% comment %} ===================================================================== {% endcomment %}
+
+        <section id="blog" class="blog blog-grid pt-50 pb-0">
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- Blog Item #1 -->
+                 <div class="col-md-12 mb-3 text-center">
+                     <h2 data-aos="fade-up" data-aos-duration="500" style="opacity:0.3" class="aos-init aos-animate">BLOG</h2>
+                     </div>
+                             </div> 
+                        <div class="row">
+        <div class="grid masonry flexmasonry flexmasonry-responsive flexmasonry-cols-3" style="height: 1772px;">
+                    {% if blogs %}
+                    {% for blog in blogs %}
+                        <div class="item flexmasonry-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="500">
+                            <div class="blog-item m-5">
+                                <div class="mb-10">
+                                    <a href="{% url 'blog_detail' slug=blog.slug %}">
+                                        <img src="{{ blog.content_view.url }}" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <!-- /.entry-img -->
+                                <div class="blog__content"> 
+                                   <b><a style="font-weight:bold" href="{% url 'blog_detail' slug=blog.slug %}" class="news__desc">{{ blog.blog_title }}</a>  </b> 
+                                 
+                                </div>
+                                <div class="blog__desc">   </div> 
+                                 <a style="font-weight:bold" href="{% url 'blog_detail' slug=blog.slug %}" class="news__desc">Detay için tıklayınız</a> 
+                                <!-- /.entry-content -->
+                            </div>
+                            <!-- /.blog-item -->
+                        </div>
+                        {% endfor %}
+                        <!-- /.col-lg-4 -->
+                     {% else %}
+                        <h1>Henüz yazı eklenmedi</h1>
+                     {% endif %}       
+                    
+            <div class="flexmasonry-break flexmasonry-break-1"></div><div class="flexmasonry-break flexmasonry-break-2"></div></div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+{% endblock %}
+{% block lowerJs %}
+
+{% endblock %}

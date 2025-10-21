@@ -1,0 +1,1758 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Ana Sayfa | The Gusto
+{% endblock %}
+
+{% block meta_desc %}
+"The Gusto, dünya çapında prestijli otel ve restoranlar için lüks masaüstü sunum ürünleri, büfe ekipmanları ve özel tasarım gastronomi çözümleri sunar"
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/toastr.css' %}" />
+{% endblock %}
+{% block body %}
+  <section id="slider" class="slider d-sm-block d-none">
+    <div class="carousel owl-carousel carousel-arrows carousel-dots mainslider owl-loaded owl-drag" data-slide="1" data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+
+          
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_1.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Size Özel Tasarımlar</h2>
+                      <span class="slide__subtitle">Kendi hikayenizi yaratın.</span>
+                      <p style="max-width: 350px">Özel projeler ve kişiselleştirilmiş çözümlerle yanınızdayız.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_2.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Fark Detaylarda Gizli</h2>
+                      <span class="slide__subtitle">Her dokunuşta zarafet.</span>
+                      <p style="max-width: 350px">Atmosferden masaüstüne kadar her şey sizi farklı hissettirmek için tasarlandı. </p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_3.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Her Detayda Mükemmellik</h2>
+                      <span class="slide__subtitle">Hikayeniz, bizim ilhamımız!</span>
+                      <p style="max-width: 350px">Benzersiz sunumlar, özgün detaylar ve hatırlanacak deneyimler için buradayız.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_4.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Sıra Dışı Tasarımlar</h2>
+                      <span class="slide__subtitle">Hayal gücünüzü gerçeğe dönüştürün</span>
+                      <p style="max-width: 350px">Benzersiz sunumlar, özgün detaylar ve hatırlanacak deneyimler için buradayız.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+
+</div>
+  </section>
+  <!-- mobil slider -->
+  <section id="slider" class="slider  d-block d-sm-none">
+    <div class="carousel owl-carousel carousel-arrows carousel-dots mainslider owl-loaded owl-drag" data-slide="1" data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+
+          
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_1.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Size Özel Tasarımlar</h2>
+                      <span class="slide__subtitle">Kendi hikayenizi yaratın.</span>
+                      <p style="max-width: 350px">Özel projeler ve kişiselleştirilmiş çözümlerle yanınızdayız.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_2.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Fark Detaylarda Gizli</h2>
+                      <span class="slide__subtitle">Her dokunuşta zarafet.</span>
+                      <p style="max-width: 350px">Atmosferden masaüstüne kadar her şey sizi farklı hissettirmek için tasarlandı. </p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_3.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Her Detayda Mükemmellik</h2>
+                      <span class="slide__subtitle">Hikayeniz, bizim ilhamımız!</span>
+                      <p style="max-width: 350px">Benzersiz sunumlar, özgün detaylar ve hatırlanacak deneyimler için buradayız.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2" style="background-image: url('{% static "img/slider/slider_4.webp" %}'); background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 text-white text-left">
+                    <div class="slide__content">
+                      
+                      <h2 class="slide__title">Sıra Dışı Tasarımlar</h2>
+                      <span class="slide__subtitle">Hayal gücünüzü gerçeğe dönüştürün</span>
+                      <p style="max-width: 350px">Benzersiz sunumlar, özgün detaylar ve hatırlanacak deneyimler için buradayız.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+
+</div>
+  </section>
+  {% comment %} <section id="slider" class="slider  d-block d-sm-none">
+                    <div class="carousel owl-carousel carousel-arrows carousel-dots mainslider owl-loaded owl-drag" data-slide="1" data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+
+                         
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all;"><div class="owl-item"><div class="slide-item  text-center bg-overlay bg-overlay-2 ">
+                            <video muted="" loop="" autoplay="" playsinline="" id="myVideo">
+                                <source src="https://accolink.com/assets/images/accolink-bg2_1.mp4" type="video/mp4">
+                            </video>
+                        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"><button role="button" class="owl-dot active"><span></span></button></div><div class="owl-thumbs"></div></div>
+
+                </section> {% endcomment %}
+  <!-- /.slider -->
+{% comment %} <div class="owl-stage-outer">
+        <div class="owl-stage">
+          <div class="owl-item">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Size Özel Tasarımlar</h2>
+                      <span class="slide__subtitle">Kendi hikayenizi yaratın.</span>
+                      <p style="max-width: 350px">Özel projeler ve kişiselleştirilmiş çözümlerle yanınızdayız.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div> {% endcomment %}
+          
+            {% comment %} <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Benzersiz Deneyimler</h2>
+                      <span class="slide__subtitle">Her sunum bir hikaye anlatır.</span>
+                      <p style="max-width: 350px">Dünya çapında en iyi HoReCa çözümleriyle tanışın.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div> {% endcomment %}
+          {% comment %} <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">İlham Veren Çözümler</h2>
+                      <span class="slide__subtitle">Her detay bir fark yaratır.</span>
+                      <p style="max-width: 350px">Mütevazı detaylardan lüks tercihlere kadar her ihtiyaca uygun çözümler.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Size Özel Tasarımlar</h2>
+                      <span class="slide__subtitle">Kendi hikayenizi yaratın.</span>
+                      <p style="max-width: 350px">Özel projeler ve kişiselleştirilmiş çözümlerle yanınızdayız.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">İnovasyon ve Estetik</h2>
+                      <span class="slide__subtitle">Her sunum bir sanat eseridir.</span>
+                      <p style="max-width: 350px">HoReCa dünyasının en iyileriyle eşsiz konseptler yaratıyoruz.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item" style="width: 1785px;">
+            <div class="slide-item text-center bg-overlay bg-overlay-2">
+              <video muted="" loop="" autoplay="" playsinline="" id="myVideo">
+                <source src="assets/images/accolink-bg2_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="owl-item" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Özel Hissedin</h2>
+                      <span class="slide__subtitle">Biz bunun için varız...</span>
+                      <p style="max-width: 350px">Masaüstünden atmosfere, her detayda fark yaratıyoruz.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Her Detayda Mükemmellik</h2>
+                      <span class="slide__subtitle">İlham veren konseptler yaratıyoruz.</span>
+                      <p style="max-width: 350px">Masaüstü sunumlarınıza estetik ve kalite katıyoruz.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item animated owl-animated-in fadeIn active" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Benzersiz Deneyimler</h2>
+                      <span class="slide__subtitle">Her sunum bir hikaye anlatır.</span>
+                      <p style="max-width: 350px">Dünya çapında en iyi HoReCa çözümleriyle tanışın.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">İlham Veren Çözümler</h2>
+                      <span class="slide__subtitle">Her detay bir fark yaratır.</span>
+                      <p style="max-width: 350px">Mütevazı detaylardan lüks tercihlere kadar her ihtiyaca uygun çözümler.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Size Özel Tasarımlar</h2>
+                      <span class="slide__subtitle">Kendi hikayenizi yaratın.</span>
+                      <p style="max-width: 350px">Özel projeler ve kişiselleştirilmiş çözümlerle yanınızdayız.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item animated owl-animated-in fadeIn" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">İnovasyon ve Estetik</h2>
+                      <span class="slide__subtitle">Her sunum bir sanat eseridir.</span>
+                      <p style="max-width: 350px">HoReCa dünyasının en iyileriyle eşsiz konseptler yaratıyoruz.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item text-center bg-overlay bg-overlay-2">
+              <video muted="" loop="" autoplay="" playsinline="" id="myVideo">
+                <source src="assets/images/accolink-bg2_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Özel Hissedin</h2>
+                      <span class="slide__subtitle">Biz bunun için varız...</span>
+                      <p style="max-width: 350px">Masaüstünden atmosfere, her detayda fark yaratıyoruz.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Her Detayda Mükemmellik</h2>
+                      <span class="slide__subtitle">İlham veren konseptler yaratıyoruz.</span>
+                      <p style="max-width: 350px">Masaüstü sunumlarınıza estetik ve kalite katıyoruz.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="owl-item cloned" style="width: 1785px;">
+            <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2 bg-img" style="background-image: url("{% static 'img/slider/slider1.webp' %}"); background-size: cover; background-position: center center;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 text-white">
+                    <div class="slide__content text-left">
+                      <h2 class="slide__title">Benzersiz Deneyimler</h2>
+                      <span class="slide__subtitle">Her sunum bir hikaye anlatır.</span>
+                      <p style="max-width: 350px">Dünya çapında en iyi HoReCa çözümleriyle tanışın.</p>
+                    </div>
+                    <!-- /.slide-content -->
+                  </div>
+                  <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div> {% endcomment %}
+  {% comment %} <section id="slider" class="slider d-block d-sm-none">
+    <div class="carousel owl-carousel carousel-arrows carousel-dots mainslider owl-loaded owl-drag" data-slide="1" data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+      <div class="owl-stage-outer">
+        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all;">
+          <div class="owl-item">
+            <div class="slide-item text-center bg-overlay bg-overlay-2">
+              <video muted="" loop="" autoplay="" playsinline="" id="myVideo">
+                <source src="assets/images/accolink-bg2_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="owl-nav disabled">
+        <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
+      </div>
+      <div class="owl-dots disabled">
+        <button role="button" class="owl-dot active"><span></span></button>
+      </div>
+      <div class="owl-thumbs"></div>
+    </div>
+  </section> {% endcomment %}
+
+  <!--  ======================
+              Öne Çıkanlar 
+            =========================  -->
+  <section id="OneCikanlar" class="text-center-xs-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+          <div class="heading heading-3 text-center">
+            <h2 class="heading__titlegray aos-init" data-aos="fade" data-aos-duration="1000">Öne Çıkanlar</h2>
+          </div>
+          <!-- /.heading -->
+        </div>
+        <!-- /.col-lg-6 -->
+      </div>
+    </div>
+
+    <div class="onecikanlar mt-lg-4">
+      <div class="flexbox flexbox-row p-0">
+        <div class="box p-0" style="width: 100%">
+          <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+            <div class="swiper-wrapper" id="swiper-wrapper-905ca33d156b4e1a" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-714px, 0px, 0px);">
+              <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="{% static 'img/one_cikan/one_cikan_1.webp'%}" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="{% static 'img/one_cikan/one_cikan_2.webp'%}" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="{% static 'img/one_cikan/one_cikan_3.webp'%}" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="{% static 'img/one_cikan/one_cikan_4.webp'%}" alt="" />
+                </div>
+              </div>
+              
+                {% comment %} <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="{% static 'img/one_cikan/one_cikan_1'%}" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-next" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 357px;">
+                <div>
+                  <img src="{% static 'img/one_cikan/one_cikan_1'%}" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-prev" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/p3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide aos-init swiper-slide-active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o1.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide aos-init swiper-slide-next" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o3.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o2.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide aos-init swiper-slide-duplicate-prev" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/p3.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-next" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/o2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 357px;">
+                <div>
+                  <img src="assets/images/p3.jpg" alt="" />
+                </div>
+              </div> {% endcomment %}
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ********* -->
+
+  {% comment %} <div class="video-container">
+    <video muted="" loop="" autoplay="" playsinline="" id="myVideo">
+      <source src="assets/images/accolink_showroom_1.mp4" type="video/mp4" />Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <div class="overlay">
+      <h1>Where dreams are made</h1>
+
+      <p>1000’den fazla ürünü deneyimleyebileceğiniz showroom’umuzu ziyaret edin, veya dijital showroom deneyimini keşfedin.</p>
+
+      <a href="https://my.surveyhands.com/tour/accolink" target="_blank" class="aos-init aos-animate btn__primary go-link btnshowroom"><img src="/assets/images/w360.png" style="height:35px;" alt="Showroom'u keşfet" title="Showroom" /> Showroom’u Keşfet</a>
+    </div>
+  </div> {% endcomment %}
+
+  <!--  ========================
+              Content
+            ===========================  -->
+  <section id="Content1" class="pt-90 pb-30 text-center-xs-sm" style="background-image: url('{% static "img/op_logo.gif" %}'); background-position: right; background-repeat: no-repeat;background-color: rgba(255,255,255,0.8);
+            background-blend-mode: lighten;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Sıradışı atmosferler</h2>
+          <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Benzersiz deneyimler</h3>
+          <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Dünya çapındaki en iyi markalarını ve ürünlerini, masaüstü sunumlarından özel projelere, mütevazi seçeneklerden en lüks tercihlere kadar geniş bir yelpazede bir araya getiriyoruz. Sizin için, yaratmak istediğiniz konsept ve atmosferi gerçeğe dönüştürme sürecine benzersiz bir katkı sağlıyoruz.</p>
+          <div data-aos="fade-up" data-aos-duration="1400" class="aos-init">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.85" height="23.109" viewBox="0 0 37.85 23.109">
+              <defs>
+                <clipPath id="clip-pathhik">
+                  <rect id="Rectangle_121" data-name="Rectangle 121" width="37.85" height="23.109" transform="translate(0 0)" fill="#1a1f4c"></rect>
+                </clipPath>
+              </defs>
+              <g id="Group_134" data-name="Group 134" transform="translate(0 0)">
+                <g id="Group_132" data-name="Group 132" clip-path="url(#clip-pathhik)">
+                  <path id="Path_10005" data-name="Path 10005" d="M37.244,12.161H.606a.607.607,0,0,1,0-1.213H37.244a.607.607,0,0,1,0,1.213" fill="#1a1f4c"></path>
+                  <path id="Path_10006" data-name="Path 10006" d="M26.269,23.109a.606.606,0,0,1-.429-1.035l10.52-10.52L25.84,1.035A.606.606,0,0,1,26.7.178L37.646,11.126a.607.607,0,0,1,0,.857L26.7,22.931a.6.6,0,0,1-.429.178" fill="#1a1f4c"></path>
+                </g>
+              </g>
+            </svg>
+            <a href="{% url 'about' %}">Hikayemiz</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="{% static "img/sira_disi.webp" %}" data-aos="fade-up" data-aos-duration="1600 " alt="" class="aos-init" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ********* -->
+
+  <!--  ========================
+              Markalar
+            ===========================  -->
+  <section id="Logos" class="pt-90 pb-30 text-center-xs-sm">
+    <div class="line-container aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="line-text heading__titlegray mb-0">Markalar</h2>
+    </div>
+
+    <div class="swiper-container swiper--top mt-5 mb-3 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+      <div id="logolist" class="swiper-wrapper" aria-live="off">
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/atalay.png' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/bosfor.png' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/bybone.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/bykitchen.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/EmperoLogo.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/fantomlogo.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/gastrotech.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/iceinox.png' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/jumbo.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/lugga.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/mateka.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/narin.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/ndustrio.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/pasabahce.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/remta.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/samixir.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/yildiz.webp' %}" alt="" />
+            </a>
+        </div>
+        <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="javascript:void(0)">
+            <img class="card-img-top" src="{% static 'img/markalar/yuksel.webp' %}" alt="" />
+            </a>
+        </div>
+
+        {% comment %} <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate swiper-slide-duplicate-prev" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="/marka/f2d"><img class="card-img-top" src="/images/content/orj_fgJe4.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate swiper-slide-duplicate-active" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="1" role="group" aria-label="2 / 24">
+          <a href="/marka/figgjo"><img class="card-img-top" src="/images/content/orj_QRvMo.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate swiper-slide-duplicate-next" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="2" role="group" aria-label="3 / 24">
+          <a href="/marka/hisar"><img class="card-img-top" src="/images/content/orj_LkuPM.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="3" role="group" aria-label="4 / 24">
+          <a href="/marka/id-fine"><img class="card-img-top" src="/images/content/orj_92ybA.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="4" role="group" aria-label="5 / 24">
+          <a href="/marka/jars"><img class="card-img-top" src="/images/content/orj_CZRIa.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="5" role="group" aria-label="6 / 24">
+          <a href="/marka/la-tavola"><img class="card-img-top" src="/images/content/orj_iJUdL.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="6" role="group" aria-label="7 / 24">
+          <a href="/marka/le-coq-porcelaine"><img class="card-img-top" src="/images/content/orj_eAivv.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="7" role="group" aria-label="8 / 24">
+          <a href="/marka/arda-cam"><img class="card-img-top" src="/images/content/orj_vqWWL.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="8" role="group" aria-label="9 / 24">
+          <a href="/marka/rona2serve"><img class="card-img-top" src="/images/content/orj_jssgX.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="9" role="group" aria-label="10 / 24">
+          <a href="/marka/chic"><img class="card-img-top" src="/images/content/orj_Q4fGh.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="10" role="group" aria-label="11 / 24">
+          <a href="/marka/thrill"><img class="card-img-top" src="/images/content/orj_6zBs2.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="11" role="group" aria-label="12 / 24">
+          <a href="/marka/hic-seramik"><img class="card-img-top" src="/images/content/orj_C7v6b.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="12" role="group" aria-label="13 / 24">
+          <a href="/marka/accolink-bespoke"><img class="card-img-top" src="/images/content/orj_pCVlA.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="13" role="group" aria-label="14 / 24">
+          <a href="/marka/bonna"><img class="card-img-top" src="/images/content/orj_Xq4lp.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="14" role="group" aria-label="15 / 24">
+          <a href="/marka/urban-bar"><img class="card-img-top" src="/images/content/orj_iLJo4.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="15" role="group" aria-label="16 / 24">
+          <a href="/marka/tum-dunyadan-musterilerin-tercih-edecegi-bir-adres-olmak-icin-calisiyor-accolink"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="16" role="group" aria-label="17 / 24">
+          <a href="/marka/accolink-ve-ardacam-is-birligi"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="17" role="group" aria-label="18 / 24">
+          <a href="/marka/urun-sunumu-sanati-mermer-sunum-tepsileri-ve-otel-ekipmanlari"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="18" role="group" aria-label="19 / 24">
+          <a href="/marka/bakir-tencereler-ve-pisirme-ekipmanlari-mutfaktaki-sik-fonksiyonellik"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="19" role="group" aria-label="20 / 24">
+          <a href="/marka/bar-ekipmanlari-kolay-hazirlama-sik-sunumlar-hijyen-ve-daha-fazlasi-icin-aradiginiz-her-sey-accolink-te"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="20" role="group" aria-label="21 / 24">
+          <a href="/marka/accolink-ve-la-tavola-is-birligiyle-acik-bufe-deneyimine-yeni-bir-boyut"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="21" role="group" aria-label="22 / 24">
+          <a href="/marka/camin-buyusu-estetik-ve-islevsellik-bir-arada"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="22" role="group" aria-label="23 / 24">
+          <a href="/marka/porselen-sofra-urunleri-ve-sunum-tabaklari-estetik-ve-kalitenin-bulusma-noktasi"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="23" role="group" aria-label="24 / 24">
+          <a href="/marka/profesyonel-sef-bicaklari-pisirme-sanatinin-vazgecilmezleri"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate swiper-slide-prev" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="/marka/f2d"><img class="card-img-top" src="/images/content/orj_fgJe4.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate swiper-slide-active" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="1" role="group" aria-label="2 / 24">
+          <a href="/marka/figgjo"><img class="card-img-top" src="/images/content/orj_QRvMo.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate swiper-slide-next" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="2" role="group" aria-label="3 / 24">
+          <a href="/marka/hisar"><img class="card-img-top" src="/images/content/orj_LkuPM.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="3" role="group" aria-label="4 / 24">
+          <a href="/marka/id-fine"><img class="card-img-top" src="/images/content/orj_92ybA.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="4" role="group" aria-label="5 / 24">
+          <a href="/marka/jars"><img class="card-img-top" src="/images/content/orj_CZRIa.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="5" role="group" aria-label="6 / 24">
+          <a href="/marka/la-tavola"><img class="card-img-top" src="/images/content/orj_iJUdL.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="6" role="group" aria-label="7 / 24">
+          <a href="/marka/le-coq-porcelaine"><img class="card-img-top" src="/images/content/orj_eAivv.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="7" role="group" aria-label="8 / 24">
+          <a href="/marka/arda-cam"><img class="card-img-top" src="/images/content/orj_vqWWL.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="8" role="group" aria-label="9 / 24">
+          <a href="/marka/rona2serve"><img class="card-img-top" src="/images/content/orj_jssgX.png" alt="" /></a>
+        </div>
+
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="9" role="group" aria-label="10 / 24">
+          <a href="/marka/chic"><img class="card-img-top" src="/images/content/orj_Q4fGh.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="10" role="group" aria-label="11 / 24">
+          <a href="/marka/thrill"><img class="card-img-top" src="/images/content/orj_6zBs2.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="11" role="group" aria-label="12 / 24">
+          <a href="/marka/hic-seramik"><img class="card-img-top" src="/images/content/orj_C7v6b.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="12" role="group" aria-label="13 / 24">
+          <a href="/marka/accolink-bespoke"><img class="card-img-top" src="/images/content/orj_pCVlA.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="13" role="group" aria-label="14 / 24">
+          <a href="/marka/bonna"><img class="card-img-top" src="/images/content/orj_Xq4lp.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="14" role="group" aria-label="15 / 24">
+          <a href="/marka/urban-bar"><img class="card-img-top" src="/images/content/orj_iLJo4.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="15" role="group" aria-label="16 / 24">
+          <a href="/marka/tum-dunyadan-musterilerin-tercih-edecegi-bir-adres-olmak-icin-calisiyor-accolink"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="16" role="group" aria-label="17 / 24">
+          <a href="/marka/accolink-ve-ardacam-is-birligi"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="17" role="group" aria-label="18 / 24">
+          <a href="/marka/urun-sunumu-sanati-mermer-sunum-tepsileri-ve-otel-ekipmanlari"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="18" role="group" aria-label="19 / 24">
+          <a href="/marka/bakir-tencereler-ve-pisirme-ekipmanlari-mutfaktaki-sik-fonksiyonellik"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="19" role="group" aria-label="20 / 24">
+          <a href="/marka/bar-ekipmanlari-kolay-hazirlama-sik-sunumlar-hijyen-ve-daha-fazlasi-icin-aradiginiz-her-sey-accolink-te"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="20" role="group" aria-label="21 / 24">
+          <a href="/marka/accolink-ve-la-tavola-is-birligiyle-acik-bufe-deneyimine-yeni-bir-boyut"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="21" role="group" aria-label="22 / 24">
+          <a href="/marka/camin-buyusu-estetik-ve-islevsellik-bir-arada"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="22" role="group" aria-label="23 / 24">
+          <a href="/marka/porselen-sofra-urunleri-ve-sunum-tabaklari-estetik-ve-kalitenin-bulusma-noktasi"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="23" role="group" aria-label="24 / 24">
+          <a href="/marka/profesyonel-sef-bicaklari-pisirme-sanatinin-vazgecilmezleri"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate swiper-slide-duplicate-prev" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
+          <a href="/marka/f2d"><img class="card-img-top" src="/images/content/orj_fgJe4.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate swiper-slide-duplicate-active" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="1" role="group" aria-label="2 / 24">
+          <a href="/marka/figgjo"><img class="card-img-top" src="/images/content/orj_QRvMo.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate swiper-slide-duplicate-next" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="2" role="group" aria-label="3 / 24">
+          <a href="/marka/hisar"><img class="card-img-top" src="/images/content/orj_LkuPM.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="3" role="group" aria-label="4 / 24">
+          <a href="/marka/id-fine"><img class="card-img-top" src="/images/content/orj_92ybA.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="4" role="group" aria-label="5 / 24">
+          <a href="/marka/jars"><img class="card-img-top" src="/images/content/orj_CZRIa.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="5" role="group" aria-label="6 / 24">
+          <a href="/marka/la-tavola"><img class="card-img-top" src="/images/content/orj_iJUdL.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="6" role="group" aria-label="7 / 24">
+          <a href="/marka/le-coq-porcelaine"><img class="card-img-top" src="/images/content/orj_eAivv.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="7" role="group" aria-label="8 / 24">
+          <a href="/marka/arda-cam"><img class="card-img-top" src="/images/content/orj_vqWWL.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="8" role="group" aria-label="9 / 24">
+          <a href="/marka/rona2serve"><img class="card-img-top" src="/images/content/orj_jssgX.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="9" role="group" aria-label="10 / 24">
+          <a href="/marka/chic"><img class="card-img-top" src="/images/content/orj_Q4fGh.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="10" role="group" aria-label="11 / 24">
+          <a href="/marka/thrill"><img class="card-img-top" src="/images/content/orj_6zBs2.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="11" role="group" aria-label="12 / 24">
+          <a href="/marka/hic-seramik"><img class="card-img-top" src="/images/content/orj_C7v6b.jpg" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="12" role="group" aria-label="13 / 24">
+          <a href="/marka/accolink-bespoke"><img class="card-img-top" src="/images/content/orj_pCVlA.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="13" role="group" aria-label="14 / 24">
+          <a href="/marka/bonna"><img class="card-img-top" src="/images/content/orj_Xq4lp.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="14" role="group" aria-label="15 / 24">
+          <a href="/marka/urban-bar"><img class="card-img-top" src="/images/content/orj_iLJo4.png" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="15" role="group" aria-label="16 / 24">
+          <a href="/marka/tum-dunyadan-musterilerin-tercih-edecegi-bir-adres-olmak-icin-calisiyor-accolink"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="16" role="group" aria-label="17 / 24">
+          <a href="/marka/accolink-ve-ardacam-is-birligi"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="17" role="group" aria-label="18 / 24">
+          <a href="/marka/urun-sunumu-sanati-mermer-sunum-tepsileri-ve-otel-ekipmanlari"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="18" role="group" aria-label="19 / 24">
+          <a href="/marka/bakir-tencereler-ve-pisirme-ekipmanlari-mutfaktaki-sik-fonksiyonellik"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="19" role="group" aria-label="20 / 24">
+          <a href="/marka/bar-ekipmanlari-kolay-hazirlama-sik-sunumlar-hijyen-ve-daha-fazlasi-icin-aradiginiz-her-sey-accolink-te"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="20" role="group" aria-label="21 / 24">
+          <a href="/marka/accolink-ve-la-tavola-is-birligiyle-acik-bufe-deneyimine-yeni-bir-boyut"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="21" role="group" aria-label="22 / 24">
+          <a href="/marka/camin-buyusu-estetik-ve-islevsellik-bir-arada"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="22" role="group" aria-label="23 / 24">
+          <a href="/marka/porselen-sofra-urunleri-ve-sunum-tabaklari-estetik-ve-kalitenin-bulusma-noktasi"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div>
+        <div class="swiper-slide aos-init swiper-slide-duplicate aos-animate" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="23" role="group" aria-label="24 / 24">
+          <a href="/marka/profesyonel-sef-bicaklari-pisirme-sanatinin-vazgecilmezleri"><img class="card-img-top" src="/images/content/orj_" alt="" /></a>
+        </div> {% endcomment %}
+      </div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    {% comment %} <div class="text-center">
+      <a href="/markalar" class="aos-init go-link go-markalar aos-animate" data-aos="fade-up" data-aos-duration="1000">Markalar Sayfası</a>
+    </div> {% endcomment %}
+    <hr />
+  </section>
+  <!-- ********* -->
+
+  <!--  ======================
+              Sunumlar 
+            =========================  -->
+  <section id="Sunumlar" class="pt-md-5 pb-md-5 text-center-xs-sm pt-sm-0">
+    <div class="mt-40">
+      <div class="container-fluid m-0 p-0" style="width: 100%">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="pl-5 pr-5">
+              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Masa Üstü <span>Sunumlar</span></h3>
+              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Özenle tasarlanmış ve yüksek kaliteli malzemelerle üretilen ürünlerimiz, sofralarınıza estetik bir dokunuş kazandırırken servis süreçlerinizi kolaylaştırır. Şıklığı ve dayanıklılığıyla öne çıkan The Gusto masaüstü sunumları, misafirlerinize unutulmaz bir yemek deneyimi yaşatmanın anahtarıdır. The Gusto olarak, her detayda kaliteyi ve farkı hissettiren profesyonel çözümler sunmaya devam ediyoruz.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 galeri1">
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" data-aos-duration="1000">
+              <div class="swiper-wrapper" id="swiper-wrapper-bbc65910cd5fea024" aria-live="polite">
+                <div class="swiper-slide aos-init" data-swiper-slide-index="3" role="group" aria-label="4 / 5">
+                  <img src="{% static 'img/masaustu/masaustu.webp' %}" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide aos-init" data-swiper-slide-index="3" role="group" aria-label="4 / 5">
+                  <img src="{% static 'img/masaustu/masaustu_2.webp' %}" alt="masa üstü sunumlar" />
+                </div>
+                
+                {% comment %} <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu4.jpg" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" role="group" aria-label="5 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu5.jpg" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu1.jpg" alt="masa üstü sunumlar" />
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu2.jpg" alt="masa üstü sunumlar" />
+                </div>
+
+                <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu3.jpg" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu4.jpg" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" role="group" aria-label="5 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu5.jpg" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu1.jpg" alt="masa üstü sunumlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 5" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/masaustu2.jpg" alt="masa üstü sunumlar" />
+                </div> {% endcomment %}
+              </div>
+              <div id="dcn" class="customNavigation">
+                <a class="btn prev" href="#" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-bbc65910cd5fea024"><i class="gg-arrow-left-o"><img src="{% static 'img/arrow-left.png' %}" alt="" /></i></a>
+                <a class="btn next" href="#" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-bbc65910cd5fea024"><i class="gg-arrow-right-o"><img src="{% static 'img/arrow-right.png' %}" alt="" /></i></a>
+              </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-lg-6 galeri2">
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-rtl" data-aos-duration="1000">
+              <div class="swiper-wrapper" id="swiper-wrapper-c8c8c9f633f9a213" aria-live="polite" style="transform: translate3d(1060px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-slide aos-init" data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  <img src="{% static 'img/bufe/bufe_1.webp' %}" alt="büfe sunumları" />
+                </div>
+                <div class="swiper-slide aos-init" data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  <img src="{% static 'img/bufe/bufe_2.webp' %}" alt="büfe sunumları" />
+                </div>
+              </div>
+              <div id="dcn" class="customNavigation">
+                <a class="btn prev" href="#" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c8c8c9f633f9a213"><i class="gg-arrow-left-o"><img src="{% static 'img/arrow-left.png' %}" alt="" /></i></a>
+                <a class="btn next" href="#" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c8c8c9f633f9a213"><i class="gg-arrow-right-o"><img src="{% static 'img/arrow-right.png' %}" alt="" /></i></a>
+              </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div style="padding: 50px">
+              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Büfe <span>Sunumlar</span></h3>
+              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">The Gusto, otel ve restoran büfelerinizi estetik ve düzenin buluştuğu alanlara dönüştürür. Özenle tasarlanan büfe sunum ürünlerimiz, yemeklerinizi sadece sergilemekle kalmaz, aynı zamanda misafirlerinize unutulmaz bir görsel deneyim yaşatır. Şıklığı, dayanıklılığı ve fonksiyonelliği bir araya getiren The Gusto koleksiyonları, her konseptteki büfeye zarafet katar. Fark yaratmak ve sunumlarınızı bir adım öteye taşımak için The Gusto’nun özel tasarımlarını keşfedin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="pl-5 pr-5">
+              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Sıradışı <span>Ekipmanlar</span></h3>
+              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Mekanınızın tarzını yansıtan, fark yaratan detaylar mı arıyorsunuz? The Gusto’nun özgün tasarımlı ekipmanlarıyla misafirlerinizi şaşırtın. Estetikle işlevselliği buluşturan özel ürünlerimiz, otel ve restoranlarınıza karakter katarak atmosferinizi bir adım öteye taşır. Sıradanlıktan uzak, dikkat çekici ve yenilikçi çözümlerle mekânlarınıza farklı bir kimlik kazandırın. The Gusto’nun sıradışı ekipman koleksiyonunu keşfedin, her detayda farkı hissedin.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 galeri1">
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" data-aos-duration="1000">
+              <div class="swiper-wrapper" id="swiper-wrapper-0a62b1210ba3d01bf" aria-live="polite" style="transform: translate3d(-1060px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-slide aos-init" data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  <img src="{% static 'img/sira_disi/sira_disi_1.webp' %}" alt="sıradışı ekipmanlar" />
+                </div>
+                <div class="swiper-slide aos-init" data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  <img src="{% static 'img/sira_disi/sira_disi_2.webp' %}" alt="sıradışı ekipmanlar" />
+                </div>
+                {% comment %} <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 2.jpg" alt="sıradışı ekipmanlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 3.jpg" alt="sıradışı ekipmanlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 1.jpg" alt="sıradışı ekipmanlar" />
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 2.jpg" alt="sıradışı ekipmanlar" />
+                </div>
+
+                <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 3.jpg" alt="sıradışı ekipmanlar" />
+                </div>
+
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 1.jpg" alt="sıradışı ekipmanlar" />
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="width: 525px; margin-right: 5px;">
+                  <img src="assets/images/sıradışı ekipmanlar 2.jpg" alt="sıradışı ekipmanlar" />
+                </div> {% endcomment %}
+              </div>
+              <div id="dcn" class="customNavigation">
+                <a class="btn prev" href="#" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0a62b1210ba3d01bf"><i class="gg-arrow-left-o"><img src="{% static 'img/arrow-left.png' %}" alt="" /></i></a>
+                <a class="btn next" href="#" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0a62b1210ba3d01bf"><i class="gg-arrow-right-o"><img src="{% static 'img/arrow-right.png' %}" alt="" /></i></a>
+              </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-lg-6 galeri2">
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-rtl" data-aos-duration="1000">
+              <div class="swiper-wrapper" id="swiper-wrapper-5bc0ecff0ac68ba7" aria-live="polite" style="transform: translate3d(1060px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-slide aos-init" data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  <img src="{% static 'img/oda_sunum/oda_sunum_1.webp' %}" alt="oda sunumları" />
+                </div>
+                <div class="swiper-slide aos-init" data-swiper-slide-index="2" role="group" aria-label="3 / 3">
+                  <img src="{% static 'img/oda_sunum/oda_sunum_2.webp' %}" alt="oda sunumları" />
+                </div>
+              </div>
+              <div id="dcn" class="customNavigation">
+                <a class="btn prev" href="#" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-5bc0ecff0ac68ba7"><i class="gg-arrow-left-o"><img src="{% static 'img/arrow-left.png' %}" alt="" /></i></a>
+                <a class="btn next" href="#" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-5bc0ecff0ac68ba7"><i class="gg-arrow-right-o"><img src="{% static 'img/arrow-right.png' %}" alt="" /></i></a>
+              </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div style="padding: 50px">
+              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Oda <span>Sunumları</span></h3>
+              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Misafirlerinize konforlu ve şık bir konaklama deneyimi sunmak için oda sunumlarınızın önemi büyük. Accolink, otel odalarınız için özenle seçilmiş ürünler sunuyor. Yüksek kaliteli tekstil ürünlerinden şık oda aksesuarlarına kadar geniş bir yelpazede ürünlerimizle misafirlerinizi memnun edin. Accolink'in oda sunumları koleksiyonunu inceleyin ve misafirlerinize ev konforunda bir konaklama deneyimi yaşatın.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ********* -->
+
+  {% comment %} <section id="testi">
+    <h3 data-aos="fade-up" data-aos-duration="1000" class="text-center aos-init">Görüşler</h3>
+    <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events aos-init" data-aos="fade" data-aos-duration="1000">
+      <div class="swiper-wrapper" id="swiper-wrapper-514234e7fa6b34c3" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-1150px, 0px, 0px);">
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Accolink firması ile tanıştığımız günden bu tarafa bizim için tedarikçiden çok bir çözüm ortağı olmuş, şirketlerimizin yenilikleri daha yakından takip edebilmesi için ihtiyacımız olan tüm çalışmaları süratle hayata geçirerek başarımızda çok büyük katkıları olmuştur. Ürün portföyünü her geçen yıl genişletip çağın gerekliliklerine göre yenilemesi bizlerin işini hep kolaylaştırmıştır. İşbirliğimizin artarak devam etmesi dilekleriyle."</p>
+            <h3>Özay Akar- Asst. General Manager F&amp;B Operations</h3>
+            <span>c-paces, İstanbul</span>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Accolink, otel olarak ihtiyaç duyduğumuz tüm ürünleri eksiksiz ve zamanında tedarik ediyor. Sundukları ürünlerin kalitesi ve çeşitliliği, misafirlerimize en iyi hizmeti sunmamızı sağlıyor. Accolink ile çalışmaktan çok memnunuz."</p>
+            <h3>Orçun Çay</h3>
+            <span>Executive Chef - Ankara HiltonSA</span>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Şık ve özgün tasarımlarınız, misafirlerimize en iyi sunumları yapmamıza ve işletmemizin kimliğini etkileyici şekilde yansıtmamıza olanak tanıyor. Dayanıklılık, estetik ve kullanım kolaylığı gibi yüksek standartlarınız, iş süreçlerimize değer katarken operasyonel verimliliğimizi artırdı. Satış öncesi ve sonrası sunduğunuz profesyonel ve çözüm odaklı hizmet anlayışınız, iş birliğimizi daha da özel kılıyor. Taleplerimize her zaman hızlı ve özenli şekilde yanıt vermeniz, sizinle çalışmaktan duyduğumuz güveni pekiştirdi."</p>
+            <h3>Ömer Yılmaz</h3>
+            <span>Executive chef - Hilton Hotels &amp; Resorts</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Geniş ve kaliteli masa üstü ekipmanları yelpazeniz, özellikle yurt dışından temin ettiğiniz tabaklar, ala carte servislerde, büfelerde, oda servisinde, havuz ve açık alanlarda kullanım açısından son derece kapsamlı, şık ve dayanıklı. Özellikle büfe ekipmanlarındaki kalite ve çeşitlilik konusunda eşsiz bir çözüm ortağı olduğunuzu düşünüyoruz"</p>
+            <h3>Savaş Aydemir - Biz İstanbul Exec. Chef</h3>
+            <span>Biz istanbul , İstanbul</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Accolink firması ile tanıştığımız günden bu tarafa bizim için tedarikçiden çok bir çözüm ortağı olmuş, şirketlerimizin yenilikleri daha yakından takip edebilmesi için ihtiyacımız olan tüm çalışmaları süratle hayata geçirerek başarımızda çok büyük katkıları olmuştur. Ürün portföyünü her geçen yıl genişletip çağın gerekliliklerine göre yenilemesi bizlerin işini hep kolaylaştırmıştır. İşbirliğimizin artarak devam etmesi dilekleriyle."</p>
+            <h3>Özay Akar- Asst. General Manager F&amp;B Operations</h3>
+            <span>c-paces, İstanbul</span>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Accolink, otel olarak ihtiyaç duyduğumuz tüm ürünleri eksiksiz ve zamanında tedarik ediyor. Sundukları ürünlerin kalitesi ve çeşitliliği, misafirlerimize en iyi hizmeti sunmamızı sağlıyor. Accolink ile çalışmaktan çok memnunuz."</p>
+            <h3>Orçun Çay</h3>
+            <span>Executive Chef - Ankara HiltonSA</span>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Şık ve özgün tasarımlarınız, misafirlerimize en iyi sunumları yapmamıza ve işletmemizin kimliğini etkileyici şekilde yansıtmamıza olanak tanıyor. Dayanıklılık, estetik ve kullanım kolaylığı gibi yüksek standartlarınız, iş süreçlerimize değer katarken operasyonel verimliliğimizi artırdı. Satış öncesi ve sonrası sunduğunuz profesyonel ve çözüm odaklı hizmet anlayışınız, iş birliğimizi daha da özel kılıyor. Taleplerimize her zaman hızlı ve özenli şekilde yanıt vermeniz, sizinle çalışmaktan duyduğumuz güveni pekiştirdi."</p>
+            <h3>Ömer Yılmaz</h3>
+            <span>Executive chef - Hilton Hotels &amp; Resorts</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Geniş ve kaliteli masa üstü ekipmanları yelpazeniz, özellikle yurt dışından temin ettiğiniz tabaklar, ala carte servislerde, büfelerde, oda servisinde, havuz ve açık alanlarda kullanım açısından son derece kapsamlı, şık ve dayanıklı. Özellikle büfe ekipmanlarındaki kalite ve çeşitlilik konusunda eşsiz bir çözüm ortağı olduğunuzu düşünüyoruz"</p>
+            <h3>Savaş Aydemir - Biz İstanbul Exec. Chef</h3>
+            <span>Biz istanbul , İstanbul</span>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Accolink firması ile tanıştığımız günden bu tarafa bizim için tedarikçiden çok bir çözüm ortağı olmuş, şirketlerimizin yenilikleri daha yakından takip edebilmesi için ihtiyacımız olan tüm çalışmaları süratle hayata geçirerek başarımızda çok büyük katkıları olmuştur. Ürün portföyünü her geçen yıl genişletip çağın gerekliliklerine göre yenilemesi bizlerin işini hep kolaylaştırmıştır. İşbirliğimizin artarak devam etmesi dilekleriyle."</p>
+            <h3>Özay Akar- Asst. General Manager F&amp;B Operations</h3>
+            <span>c-paces, İstanbul</span>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 575px;">
+          <div class="testimonial">
+            <p>"Accolink, otel olarak ihtiyaç duyduğumuz tüm ürünleri eksiksiz ve zamanında tedarik ediyor. Sundukları ürünlerin kalitesi ve çeşitliliği, misafirlerimize en iyi hizmeti sunmamızı sağlıyor. Accolink ile çalışmaktan çok memnunuz."</p>
+            <h3>Orçun Çay</h3>
+            <span>Executive Chef - Ankara HiltonSA</span>
+          </div>
+        </div>
+      </div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    <div id="testimonialbuton" class="customNavigation">
+      <a class="btn prev" href="#" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-514234e7fa6b34c3"><i class="gg-arrow-left-o"><img src="assets/images/icons/arrow-left.png" alt="" /></i></a>
+      <a class="btn next" href="#" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-514234e7fa6b34c3"><i class="gg-arrow-right-o"><img src="assets/images/icons/arrow-right.png" alt="" /></i></a>
+    </div>
+  </section> {% endcomment %}
+
+  <!--  ======================
+              Dergi 
+            =========================  -->
+  {% comment %} <section id="Projects" class="pt-30 pb-30 text-center-xs-sm">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-5">
+          <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">20 farklı ülkede</h3>
+          <h4 data-aos="fade-up" data-aos-duration="1200" class="aos-init">500'den fazla proje...</h4>
+          <p data-aos="fade-up" data-aos-duration="1400" class="aos-init">Accolink olarak, Türkiye ve uluslararası arenada gerçekleştirdiğimiz yüzlerce başarılı proje ile müşterilerimize sunduğumuz hizmet kalitesini gururla temsil ediyoruz. Özenle yürüttüğümüz projelerimiz hakkında daha fazla bilgi edinmek için referanslar sayfamıza göz atabilirsiniz.</p>
+          <p data-aos="fade-up" data-aos-duration="1400" style="font-size: 15px" class="aos-init">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.85" height="23.109" viewBox="0 0 37.85 23.109">
+              <defs>
+                <clipPath id="clip-pathdb">
+                  <rect id="Rectangle_121" data-name="Rectangle 121" width="37.85" height="23.109" transform="translate(0 0)" fill="#1a1f4c"></rect>
+                </clipPath>
+              </defs>
+              <g id="Group_134" data-name="Group 134" transform="translate(0 0)">
+                <g id="Group_132" data-name="Group 132" clip-path="url(#clip-pathdb)">
+                  <path id="Path_10005" data-name="Path 10005" d="M37.244,12.161H.606a.607.607,0,0,1,0-1.213H37.244a.607.607,0,0,1,0,1.213" fill="#1a1f4c"></path>
+                  <path id="Path_10006" data-name="Path 10006" d="M26.269,23.109a.606.606,0,0,1-.429-1.035l10.52-10.52L25.84,1.035A.606.606,0,0,1,26.7.178L37.646,11.126a.607.607,0,0,1,0,.857L26.7,22.931a.6.6,0,0,1-.429.178" fill="#1a1f4c"></path>
+                </g>
+              </g>
+            </svg>
+            <a href="/referanslar">Referanslar</a>
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-7">
+          <div class="swiper-container projects mt-5 mb-3 swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+            <div id="logos" class="swiper-wrapper" aria-live="off" style="transform: translate3d(-18960px, 0px, 0px); transition-duration: 5000ms;">
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 56">
+                <img class="card-img-top" src="{% static 'img/markalar/atalay.png' %}" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="1" role="group" aria-label="2 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/2logo_four_seasons.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="2" role="group" aria-label="3 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/3logo_hilton.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="3" role="group" aria-label="4 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/4logo_hyatt_regency.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="4" role="group" aria-label="5 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/5logo_ritz_carlton.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="5" role="group" aria-label="6 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/6logo_raffles.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="6" role="group" aria-label="7 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/7logo_ciragan.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="7" role="group" aria-label="8 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/8logo_swissotel.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="8" role="group" aria-label="9 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/9logo_mandarin.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="9" role="group" aria-label="10 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/10logo_peninsula.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="10" role="group" aria-label="11 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/11logo_intercontinental.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="11" role="group" aria-label="12 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/12logo_sixsenses.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="12" role="group" aria-label="13 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/13logo_shangri-la.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="13" role="group" aria-label="14 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/14logo_stregis.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="14" role="group" aria-label="15 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/15logo_fairmont.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="15" role="group" aria-label="16 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/16logo_katara.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="16" role="group" aria-label="17 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/17logo_murver.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="17" role="group" aria-label="18 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/18logo_sheraton.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="18" role="group" aria-label="19 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/19logo_nusret.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="19" role="group" aria-label="20 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/20logo_dmarisbay_datca.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="20" role="group" aria-label="21 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/21logo_eataly.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="21" role="group" aria-label="22 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/22logo_akiraback.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-prev" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="22" role="group" aria-label="23 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/22logo_mikla.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-active" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="23" role="group" aria-label="24 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/23logo_dogus.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-next" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="24" role="group" aria-label="25 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/24logo_marriott.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="25" role="group" aria-label="26 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/25logo_hillsidebeach.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="26" role="group" aria-label="27 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/26logo_rotana.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="27" role="group" aria-label="28 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/27logo_mövenpick.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="28" role="group" aria-label="29 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/28logo_radissonblu.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="29" role="group" aria-label="30 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/29logo_lemeridien.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="30" role="group" aria-label="31 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/30logo_sofitel.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="31" role="group" aria-label="32 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/31logo_kuda.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="32" role="group" aria-label="33 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/32logo_Azur.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="33" role="group" aria-label="34 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/33logo_summa.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="34" role="group" aria-label="35 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/34logo_cantinery.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="35" role="group" aria-label="36 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/35logo_delta.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="36" role="group" aria-label="37 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/36logo_cvk.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="37" role="group" aria-label="38 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/37logo_strada.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="38" role="group" aria-label="39 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/38logo_polulist.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="39" role="group" aria-label="40 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/39logo_lacivert.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="40" role="group" aria-label="41 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/40logo_zuma.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="41" role="group" aria-label="42 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/41logo_themaestro.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="42" role="group" aria-label="43 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/42logo_gezihotel.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="43" role="group" aria-label="44 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/43logo_lucca.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="44" role="group" aria-label="45 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/44logo_29.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="45" role="group" aria-label="46 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/45logo_wyndham.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="46" role="group" aria-label="47 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/46logo_gizia.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="47" role="group" aria-label="48 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/47logo_parle.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="48" role="group" aria-label="49 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/48logo_olden.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="49" role="group" aria-label="50 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/49logo_biblos.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="50" role="group" aria-label="51 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/50logo_jwmarriot.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="51" role="group" aria-label="52 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/51logo_nisantasi.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="52" role="group" aria-label="53 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/52logo_mezzaluna.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="53" role="group" aria-label="54 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/53logo_masaistanbul.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="54" role="group" aria-label="55 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/54logo_therua.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="55" role="group" aria-label="56 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/55logo_parkfora.png" alt="" />
+              </div>
+              <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/1logo_accor.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="1" role="group" aria-label="2 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/2logo_four_seasons.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="2" role="group" aria-label="3 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/3logo_hilton.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="3" role="group" aria-label="4 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/4logo_hyatt_regency.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="4" role="group" aria-label="5 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/5logo_ritz_carlton.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="5" role="group" aria-label="6 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/6logo_raffles.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="6" role="group" aria-label="7 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/7logo_ciragan.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="7" role="group" aria-label="8 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/8logo_swissotel.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="8" role="group" aria-label="9 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/9logo_mandarin.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="9" role="group" aria-label="10 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/10logo_peninsula.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="10" role="group" aria-label="11 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/11logo_intercontinental.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="11" role="group" aria-label="12 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/12logo_sixsenses.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="12" role="group" aria-label="13 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/13logo_shangri-la.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="13" role="group" aria-label="14 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/14logo_stregis.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="14" role="group" aria-label="15 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/15logo_fairmont.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="15" role="group" aria-label="16 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/16logo_katara.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="16" role="group" aria-label="17 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/17logo_murver.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="17" role="group" aria-label="18 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/18logo_sheraton.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="18" role="group" aria-label="19 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/19logo_nusret.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="19" role="group" aria-label="20 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/20logo_dmarisbay_datca.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="20" role="group" aria-label="21 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/21logo_eataly.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="21" role="group" aria-label="22 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/22logo_akiraback.png" alt="" />
+              </div> <div class="swiper-slide aos-init swiper-slide-prev" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="22" role="group" aria-label="23 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/22logo_mikla.png" alt="" />
+              </div> <div class="swiper-slide aos-init swiper-slide-active" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="23" role="group" aria-label="24 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/23logo_dogus.png" alt="" />
+              </div> <div class="swiper-slide aos-init swiper-slide-next" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="24" role="group" aria-label="25 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/24logo_marriott.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="25" role="group" aria-label="26 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/25logo_hillsidebeach.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="26" role="group" aria-label="27 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/26logo_rotana.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="27" role="group" aria-label="28 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/27logo_mövenpick.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="28" role="group" aria-label="29 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/28logo_radissonblu.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="29" role="group" aria-label="30 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/29logo_lemeridien.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="30" role="group" aria-label="31 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/30logo_sofitel.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="31" role="group" aria-label="32 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/31logo_kuda.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="32" role="group" aria-label="33 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/32logo_Azur.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="33" role="group" aria-label="34 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/33logo_summa.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="34" role="group" aria-label="35 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/34logo_cantinery.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="35" role="group" aria-label="36 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/35logo_delta.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="36" role="group" aria-label="37 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/36logo_cvk.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="37" role="group" aria-label="38 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/37logo_strada.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="38" role="group" aria-label="39 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/38logo_polulist.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="39" role="group" aria-label="40 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/39logo_lacivert.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="40" role="group" aria-label="41 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/40logo_zuma.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="41" role="group" aria-label="42 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/41logo_themaestro.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="42" role="group" aria-label="43 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/42logo_gezihotel.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="43" role="group" aria-label="44 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/43logo_lucca.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="44" role="group" aria-label="45 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/44logo_29.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="45" role="group" aria-label="46 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/45logo_wyndham.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="46" role="group" aria-label="47 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/46logo_gizia.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="47" role="group" aria-label="48 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/47logo_parle.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="48" role="group" aria-label="49 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/48logo_olden.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="49" role="group" aria-label="50 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/49logo_biblos.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="50" role="group" aria-label="51 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/50logo_jwmarriot.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="51" role="group" aria-label="52 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/51logo_nisantasi.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="52" role="group" aria-label="53 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/52logo_mezzaluna.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="53" role="group" aria-label="54 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/53logo_masaistanbul.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="54" role="group" aria-label="55 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/54logo_therua.png" alt="" />
+              </div> <div class="swiper-slide aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="55" role="group" aria-label="56 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/55logo_parkfora.png" alt="" />
+              </div> <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/1logo_accor.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="1" role="group" aria-label="2 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/2logo_four_seasons.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="2" role="group" aria-label="3 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/3logo_hilton.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="3" role="group" aria-label="4 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/4logo_hyatt_regency.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="4" role="group" aria-label="5 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/5logo_ritz_carlton.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="5" role="group" aria-label="6 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/6logo_raffles.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="6" role="group" aria-label="7 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/7logo_ciragan.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="7" role="group" aria-label="8 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/8logo_swissotel.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="8" role="group" aria-label="9 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/9logo_mandarin.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="9" role="group" aria-label="10 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/10logo_peninsula.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="10" role="group" aria-label="11 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/11logo_intercontinental.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="11" role="group" aria-label="12 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/12logo_sixsenses.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="12" role="group" aria-label="13 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/13logo_shangri-la.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="13" role="group" aria-label="14 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/14logo_stregis.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="14" role="group" aria-label="15 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/15logo_fairmont.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="15" role="group" aria-label="16 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/16logo_katara.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="16" role="group" aria-label="17 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/17logo_murver.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="17" role="group" aria-label="18 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/18logo_sheraton.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="18" role="group" aria-label="19 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/19logo_nusret.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="19" role="group" aria-label="20 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/20logo_dmarisbay_datca.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="20" role="group" aria-label="21 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/21logo_eataly.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="21" role="group" aria-label="22 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/22logo_akiraback.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-prev" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="22" role="group" aria-label="23 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/22logo_mikla.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-active" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="23" role="group" aria-label="24 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/23logo_dogus.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init swiper-slide-duplicate-next" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="24" role="group" aria-label="25 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/24logo_marriott.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="25" role="group" aria-label="26 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/25logo_hillsidebeach.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="26" role="group" aria-label="27 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/26logo_rotana.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="27" role="group" aria-label="28 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/27logo_mövenpick.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="28" role="group" aria-label="29 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/28logo_radissonblu.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="29" role="group" aria-label="30 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/29logo_lemeridien.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="30" role="group" aria-label="31 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/30logo_sofitel.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="31" role="group" aria-label="32 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/31logo_kuda.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="32" role="group" aria-label="33 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/32logo_Azur.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="33" role="group" aria-label="34 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/33logo_summa.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="34" role="group" aria-label="35 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/34logo_cantinery.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="35" role="group" aria-label="36 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/35logo_delta.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="36" role="group" aria-label="37 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/36logo_cvk.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="37" role="group" aria-label="38 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/37logo_strada.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="38" role="group" aria-label="39 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/38logo_polulist.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="39" role="group" aria-label="40 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/39logo_lacivert.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="40" role="group" aria-label="41 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/40logo_zuma.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="41" role="group" aria-label="42 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/41logo_themaestro.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="42" role="group" aria-label="43 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/42logo_gezihotel.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="43" role="group" aria-label="44 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/43logo_lucca.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="44" role="group" aria-label="45 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/44logo_29.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="45" role="group" aria-label="46 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/45logo_wyndham.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="46" role="group" aria-label="47 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/46logo_gizia.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="47" role="group" aria-label="48 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/47logo_parle.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="48" role="group" aria-label="49 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/48logo_olden.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="49" role="group" aria-label="50 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/49logo_biblos.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="50" role="group" aria-label="51 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/50logo_jwmarriot.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="51" role="group" aria-label="52 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/51logo_nisantasi.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="52" role="group" aria-label="53 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/52logo_mezzaluna.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="53" role="group" aria-label="54 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/53logo_masaistanbul.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="54" role="group" aria-label="55 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/54logo_therua.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate aos-init" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="55" role="group" aria-label="56 / 56">
+                <img class="card-img-top" src="/assets/images/referanslar/55logo_parkfora.png" alt="" />
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> {% endcomment %}
+  <!-- ********* -->
+
+  <section id="newsletter" class="newsletter newsletter-1 p-0 text-center-xs-sm">
+    <div class="container pt-100 pb-100">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div class="formbox">
+            <div class="title">Yeniliklerden haberdar olun</div>
+            <p>Eposta adresinizi bırakarak dijital bültenimize abone olun. Yeni ürünler ve trendlerden ilk sizin haberiniz olsun!</p>
+
+            <div class="eform">
+              {% csrf_token %}
+              <input name="email" type="text" id="email" placeholder="E-posta adresinizi giriniz" required="" />
+              <button name="Send" type="button" id="send" class="submit" />Gönder</button>
+            </div>
+            {% comment %} <div style="margin: 15px 0; text-align: center;display:flex;justify-content:center">
+              <div id="html_element2">
+                <div style="width: 304px; height: 78px;">
+                  <div>
+                    <iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-igbpjoeevu2c" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdiEiMrAAAAABWpweVKIbSgp_twT0SFc0-cRIcz&amp;co=aHR0cHM6Ly9hY2NvbGluay5jb206NDQz&amp;hl=tr&amp;v=Jv8jlA-BQE5JD6rA-h_iqNH2&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=egillzfn03h6"></iframe>
+                  </div>
+                  <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                </div>
+                <iframe style="display: none;"></iframe>
+              </div>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+{% endblock %}
+{% block lowerJs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $(document).ready(function(){
+    $('#send').click(function(){
+      let post_url = "{% url 'send_main' %}"
+      $.ajax({
+        url:post_url,
+        method:'POST',
+        data:{email:$('#email').val()},
+        success:function(res){
+               if(res.success){
+                    toastr["success"]("İşlem başarılı. En kısa sürede dönüş yapılacaktır", "İşlem Başarılı");
+                    setTimeout(function(){window.location.href = '{% url "index" %}';},3000)  
+               }else{
+                    return toastr["error"](`${res.msg}`, "Hata!");
+               }
+            }
+      });
+    })
+  })
+</script>
+
+
+{% endblock %}

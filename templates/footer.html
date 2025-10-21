@@ -1,0 +1,81 @@
+{% load static %}
+<section id="footer" class="pt-0 pb-20 bg-gray">
+                    <div class="bottom">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-4  footer__widget-about">
+                                    <div class="footer__widget-content">
+                                        <img src="{% static 'img/logo.webp'%}" class="mb-3" alt="logo"><br>
+
+                                        
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-3 -->
+                                <div class="col-sm-12 col-md-6 col-lg-8 d-none d-sm-block" id="footermenu">
+
+                                    <div class="row">
+                                        <div class="col-lg-6  col-md-2 col-sm-4 col-xs-6">
+                                            <p style="display: inline-block; font-size: 12px; line-height: 1.5">
+                                            <b>The Gusto</b><br>
+                                            <br>
+                                            T:   <a href="tel:+905554489970">(+90) 555 448 99 70</a><br>
+                                            E:<a href="mailto:info@thegusto.com.tr"> info@thegusto.com.tr</a>
+                                            <br>
+                                            <br>
+                                            150 Evler Mah. 1038 Sokak No:1 Ayvalık / Balıkesir<br>
+                                            <br>
+                                            <a href="/kvkk" rel="nofollow">Kişisel Verilerin Korunması Kanunu</a>
+                                            <br>
+                                            <a href="/cerezpolitikasi" rel="nofollow">Çerez Politikası</a>
+                                            <br>
+                                            <br>
+
+                                            © {% now "Y" %} The Gusto. 
+                                            <br>
+                                            <br>
+                                            Developed by <a href="https://aynenajans.com"><strong>Aynen Ajans</strong></a> 
+
+
+
+                                   
+                                        </p>
+                                        </div>
+                                        <div class="col-lg-6  col-md-2 col-sm-4 col-xs-6">
+                                            <a href="{% url 'about' %}" class="maplink">Hakkımızda </a>
+                                            <a href="{% url 'contact' %}" class="maplink">İletişim </a>
+                                            <a href="{% url 'catalog' %}" class="maplink">Kataloglar</a>
+                                            <a href="{% url 'blogs' %}" class="maplink">Blog</a>
+
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <!-- /.col-lg-3 -->
+
+
+                            </div>
+                        </div>
+
+                        <!-- /.container -->
+                    </div>
+
+                    <div style="clear: both"></div>
+                    <hr>
+                    <div class="text-center d-flex justify-content-center align-content-center" id="footersocial">
+                        <div class="title">
+                            <a href="https://www.instagram.com/invitayvalik/" target="_blank" style="margin-right: 15px
+                            ;font-size: 40px;">Bizi sosyal medyada<br>
+                            takip edin!</a>
+                            
+                        </div>
+                        {% comment %} <a href="https://www.linkedin.com/company/accolink/?originalSubdomain=tr" target="_blank" style="margin-right: 15px; margin-left: 25px"><i class="fab fa-linkedin" aria-hidden="true"></i></a> {% endcomment %}
+                        {% comment %} <a href="https://www.instagram.com/invitayvalik/" target="_blank" style="margin-right: 15px"><i class="fab fa-instagram" aria-hidden="true"></i></a> {% endcomment %}
+
+                        {% comment %} <a href="https://www.facebook.com/Accolink/" target="_blank" style="margin-right: 3px"><i class="fab fa-facebook" aria-hidden="true"></i></a> {% endcomment %}
+                    </div>
+                </section>

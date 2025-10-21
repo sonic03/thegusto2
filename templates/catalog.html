@@ -1,0 +1,1228 @@
+{% extends "base.html" %}
+{% load static %}
+{% load temp_tags %}
+
+{% block title %}
+Kataloglar | The Gusto
+{% endblock %}
+
+{% block body %}
+<div class="marka-container">
+        <div class="container mt-3" id="test-list">
+            <div class="row">
+                <div class="col-md-3" style="color: #a3a3a3; font-size: 12px;">
+                    Ana Sayfa &gt; Kataloglar
+                </div>
+
+                <div class="col-md-9 hide">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <label class="select">
+                                <select>
+                                    <option value="1">Pure CSS Select</option>
+                                    <option value="2">With wrapper</option>
+                                    <option value="3">No JS!</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <label class="inputsearch search">
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="col-md-4 mb-4 d-flex justify-content-end">
+                            <ul class="pagination"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5 mt-3">
+                {% comment %} <div class="col-md-3">
+
+                    <div class="card">
+                        <div class="card-header">ÜRÜN GRUPLARI</div>
+                        <div class="card-body p-1">
+                            <div class="card border-0 b-3">
+
+                                  <div class="card-body p-0  categories show" style="background-color: transparent">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                             
+                                                 <li><input type="checkbox" id="tabak-ve-kaseler" data-category="tabak-ve-kaseler"> 
+                                                    <label for="tabak-ve-kaseler">Tabak ve Kaseler</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="kupalar-ve-fincanlar" data-category="kupalar-ve-fincanlar"> 
+                                                    <label for="kupalar-ve-fincanlar">Kupalar ve Fincanlar</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="catal-bicak" data-category="catal-bicak"> 
+                                                    <label for="catal-bicak">Çatal Bıçak</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="bardak-ve-kadehler" data-category="bardak-ve-kadehler"> 
+                                                    <label for="bardak-ve-kadehler">Bardak ve Kadehler</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="masaustu-aksesuarlari" data-category="masaustu-aksesuarlari"> 
+                                                    <label for="masaustu-aksesuarlari">Masaüstü Aksesuarları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="bar-ekipmanlari" data-category="bar-ekipmanlari"> 
+                                                    <label for="bar-ekipmanlari">Bar Ekipmanları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="acik-bufe-ekipmanlari" data-category="acik-bufe-ekipmanlari"> 
+                                                    <label for="acik-bufe-ekipmanlari">Açık Büfe Ekipmanları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="mobil-servis-urunleri" data-category="mobil-servis-urunleri"> 
+                                                    <label for="mobil-servis-urunleri">Mobil Servis Ürünleri</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="banket-ekipmanlari" data-category="banket-ekipmanlari"> 
+                                                    <label for="banket-ekipmanlari">Banket Ekipmanları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="cay-saati-sunumlari" data-category="cay-saati-sunumlari"> 
+                                                    <label for="cay-saati-sunumlari">Çay Saati Sunumları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="oda-karsilama-sunumlari" data-category="oda-karsilama-sunumlari"> 
+                                                    <label for="oda-karsilama-sunumlari">Oda Karşılama Sunumları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="oda-ekipmanlari" data-category="oda-ekipmanlari"> 
+                                                    <label for="oda-ekipmanlari">Oda Ekipmanları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="tekstil-urunleri" data-category="tekstil-urunleri"> 
+                                                    <label for="tekstil-urunleri">Tekstil Ürünleri</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="muftak-ekipmanlari" data-category="muftak-ekipmanlari"> 
+                                                    <label for="muftak-ekipmanlari">Muftak Ekipmanları</label></li>
+                                            
+                                             
+                                                 <li><input type="checkbox" id="aksesuarlar" data-category="aksesuarlar"> 
+                                                    <label for="aksesuarlar">Aksesuarlar</label></li>
+                                             
+                                    </ul>
+                                </div>
+                            </div> 
+
+                        </div>
+
+                    </div>
+
+
+                     <div class="card">
+                        <div class="card-header">MARKALAR</div>
+                        <div class="card-body p-1">
+                            <div class="card border-0 b-3">
+
+                                  <div class="card-body p-0  markalar show" style="background-color: transparent">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                                
+                                                 <li><input type="checkbox" id="f2d" data-marka="f2d"> 
+                                                    <label for="f2d">F2D</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="figgjo" data-marka="figgjo"> 
+                                                    <label for="figgjo">Figgjo</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="hisar" data-marka="hisar"> 
+                                                    <label for="hisar">Hisar</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="id-fine" data-marka="id-fine"> 
+                                                    <label for="id-fine">ID Fine</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="jars" data-marka="jars"> 
+                                                    <label for="jars">Jars</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="la-tavola" data-marka="la-tavola"> 
+                                                    <label for="la-tavola">La Tavola</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="le-coq-porcelaine" data-marka="le-coq-porcelaine"> 
+                                                    <label for="le-coq-porcelaine">Le Coq Porcelaine</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="arda-cam" data-marka="arda-cam"> 
+                                                    <label for="arda-cam">Arda Cam</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="rona2serve" data-marka="rona2serve"> 
+                                                    <label for="rona2serve">Rona2serve</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="chic" data-marka="chic"> 
+                                                    <label for="chic">Chic</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="thrill" data-marka="thrill"> 
+                                                    <label for="thrill">Thrill</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="hic-seramik" data-marka="hic-seramik"> 
+                                                    <label for="hic-seramik">Hiç seramik</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="accolink-bespoke" data-marka="accolink-bespoke"> 
+                                                    <label for="accolink-bespoke">Accolink Bespoke</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="bonna" data-marka="bonna"> 
+                                                    <label for="bonna">Bonna</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="emile-henry" data-marka="emile-henry"> 
+                                                    <label for="emile-henry">Emile Henry</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="urban-bar" data-marka="urban-bar"> 
+                                                    <label for="urban-bar">Urban Bar</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="pirge" data-marka="pirge"> 
+                                                    <label for="pirge">Pirge</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="surel-demir" data-marka="surel-demir"> 
+                                                    <label for="surel-demir">Sürel Demir</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="bohem" data-marka="bohem"> 
+                                                    <label for="bohem">Bohem</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="gusto" data-marka="gusto"> 
+                                                    <label for="gusto">Gusto</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="woodpeckers" data-marka="woodpeckers"> 
+                                                    <label for="woodpeckers">Woodpeckers</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="narin" data-marka="narin"> 
+                                                    <label for="narin">Narin</label></li>
+                                            
+                                                
+                                                 <li><input type="checkbox" id="li-studio" data-marka="li-studio"> 
+                                                    <label for="li-studio">Li Studio</label></li>
+                                             
+                                    </ul>
+                                </div>
+                            </div> 
+
+                        </div>
+
+                    </div>
+                </div> {% endcomment %}
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row list">
+                                {% for item in catalog_files %}
+
+                                <div class="col-md-3 mb-3 product" data-category="" data-marka="firma-profili" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" href="{% static 'katalog/'|add:item %}">
+                                            
+                                        <div class="card-body text-center">
+                                            <canvas style="width:200px;height:230px;border:2px solid var(--primary-proj-color); border-radius: 1px; margin-bottom:8%;background: var(--primary-proj-color);padding:5px;" id="pdf-canvas-{{ forloop.counter }}"></canvas>
+                                            <p class="h6 ">
+                                                {{ item|url_to_name }}
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% comment %} <div class="col-md-4 mb-4 product" data-file="00-y1-accolink-company-profile-2024pdf" data-category="" data-marka="firma-profili" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/00 - Y1 - Accolink Company Profile - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_n1kfb.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Firma Profili 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div> {% endcomment %}
+                                        
+                                {% comment %} <div class="col-md-4 mb-4 product" data-file="00-y2-accolink-bespoke-product-creationpdf" data-category="oda-karsilama-sunumlari" data-marka="bespoke-product-creation" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/00 - Y2 - Accolink Bespoke Product Creation.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_campu.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bespoke Product Creation 
+                                          
+                                            </p>
+                                            <span>   Oda Karşılama Sunumları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="00-yeni-01-accolink-tabak-ardacam-horeca-glassware-2024pdf" data-category="tabak-ve-kaseler" data-marka="ardacam-horeca-glassware" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/00 - Yeni - 01 - Accolink Tabak - Ardacam Horeca Glassware - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_tWLcS.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Ardacam Horeca Glassware  
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-f2d-2025pdf" data-category="tabak-ve-kaseler" data-marka="f2d" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - F2D - 2025.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_CuhhR.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                F2D 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-id-fine-2025pdf" data-category="tabak-ve-kaseler" data-marka="id-fine" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - ID Fine - 2025.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_cDiHn.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                ID Fine 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-ardacam-horeca-glassware-chef-collection-2024pdf" data-category="tabak-ve-kaseler" data-marka="ardacam-horeca-glassware-chef-collection" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Ardacam Horeca Glassware - Chef Collection - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_avN3O.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Ardacam Horeca Glassware - Chef Collection 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-chic-2025pdf" data-category="tabak-ve-kaseler" data-marka="chic" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - CHIC - 2025.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_yCXrf.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Chic 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-emile-henry-professionnel-general-catalogue-2025pdf" data-category="tabak-ve-kaseler" data-marka="emile-henry" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Emile Henry Professionnel - General Catalogue - 2025.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_1DD21.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Emile Henry 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-hic-ceramics-2024pdf" data-category="tabak-ve-kaseler" data-marka="hic-ceramics" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Hic Ceramics - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_jJwNA.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Hic Ceramics 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-jars-2024pdf" data-category="tabak-ve-kaseler" data-marka="jars" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Jars - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_PRRZs.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Jars 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-la-tavola-bone-china-2022pdf" data-category="tabak-ve-kaseler" data-marka="la-tavola-bone-china" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - La Tavola Bone China - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_U8lES.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                La Tavola Bone China 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-le-coq-porcelaine-2024pdf" data-category="tabak-ve-kaseler" data-marka="le-coq-porcelaine" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Le Coq Porcelaine - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_aQSeM.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Le Coq Porcelaine 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-roots-artisanal-stoneware-2024pdf" data-category="tabak-ve-kaseler" data-marka="roots-artisanal-stoneware" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Roots Artisanal Stoneware -2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_3WGAu.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Roots Artisanal Stoneware 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-sumisura-2024pdf" data-category="tabak-ve-kaseler" data-marka="sumisura" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Sumisura -2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_ycAni.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Sumisura  
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="gusto-katalog-ekim-2024pdf" data-category="bardak-ve-kadehler" data-marka="gusto" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/Gusto-katalog-Ekim-2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_mosBu.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Gusto  
+                                          
+                                            </p>
+                                            <span>   Bardak ve Kadehler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="02-accolink-cam-pasabahce-hospitality-2023pdf" data-category="" data-marka="pasabahce-hospitality" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/02 - Accolink Cam - Paşabahçe Hospitality - 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_wJPDC.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Paşabahçe Hospitality 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="02-accolink-cam-pasabahce-nude-2024pdf" data-category="" data-marka="pasabahce-nude" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/02 - Accolink Cam - Paşabahçe Nude - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_IXSh5.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Paşabahçe Nude 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="02-accolink-cam-rona-2serve-2024pdf" data-category="bardak-ve-kadehler" data-marka="rona-2serve-2024" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/02 - Accolink Cam - Rona 2serve - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_E1cK1.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Rona 2serve - 2024 
+                                          
+                                            </p>
+                                            <span>   Bardak ve Kadehler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="02-accolink-cam-schott-zwiesel-2022pdf" data-category="bardak-ve-kadehler" data-marka="schott-zwiesel" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/02 - Accolink Cam - Schott Zwiesel - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_O8xFI.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Schott Zwiesel 
+                                          
+                                            </p>
+                                            <span>   Bardak ve Kadehler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="02-accolink-cam-zwilling-double-glass-2022pdf" data-category="bardak-ve-kadehler" data-marka="zwilling-double-glass" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/02 - Accolink Cam - Zwilling Double Glass - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_cDg1i.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Zwilling Double Glass 
+                                          
+                                            </p>
+                                            <span>   Bardak ve Kadehler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="03-accolink-catal-bicak-hisar-2022pdf" data-category="catal-bicak" data-marka="hisar" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/03 - Accolink Çatal Bıçak - Hisar - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_nRMpg.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Hisar 
+                                          
+                                            </p>
+                                            <span>   Çatal Bıçak </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="03-accolink-catal-bicak-la-tavola-cutlery-2022pdf" data-category="catal-bicak" data-marka="la-tavola-cutlery" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/03 - Accolink Çatal Bıçak - La Tavola Cutlery - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_kbwks.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                La Tavola Cutlery 
+                                          
+                                            </p>
+                                            <span>   Çatal Bıçak </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="03-accolink-catal-bicak-le-coq-flatware-2024pdf" data-category="catal-bicak" data-marka="le-coq-flatware" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/03 - Accolink Çatal Bıçak - Le Coq Flatware - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_lwOvS.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Le Coq Flatware 
+                                          
+                                            </p>
+                                            <span>   Çatal Bıçak </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-accolink-2022pdf" data-category="" data-marka="accolink" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - Accolink - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_ev1GV.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Accolink  
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-accolink-new-collection_23pdf" data-category="" data-marka="accolink-new-collection" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - Accolink New Collection_23.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_xYLuP.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Accolink New Collection 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-aps-germany-2024pdf" data-category="acik-bufe-ekipmanlari" data-marka="aps-germany" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - APS Germany - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_jpwKt.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                APS Germany 
+                                          
+                                            </p>
+                                            <span>   Açık Büfe Ekipmanları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-bohem-2023pdf" data-category="acik-bufe-ekipmanlari" data-marka="bohem" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - Bohem - 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_Jtukv.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bohem 
+                                          
+                                            </p>
+                                            <span>   Açık Büfe Ekipmanları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-k-melamine-2022pdf" data-category="" data-marka="k-melamine" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - K Melamine - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_qAfiA.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                K Melamine 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-la-tavola-2024pdf" data-category="acik-bufe-ekipmanlari" data-marka="la-tavola" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - La Tavola - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_XzMvr.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                La Tavola 
+                                          
+                                            </p>
+                                            <span>   Açık Büfe Ekipmanları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-büfe-la-tavola-mobil-servis-ürünleri-2024pdf" data-category="mobil-servis-urunleri" data-marka="la-tavola-mixology-carts" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - La Tavola Mobil Servis Ürünleri - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_UNFsh.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                La Tavola Mixology Carts 
+                                          
+                                            </p>
+                                            <span>   Mobil Servis Ürünleri </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-zepe-2022pdf" data-category="" data-marka="zepe" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - Zepe - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_Ozh7X.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Zepe 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-17-aydinlatma-2024pdf" data-category="aksesuarlar" data-marka="17-aydinlatma" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - 17 Aydınlatma - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_KpNoB.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                17 Aydınlatma 
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-accolink-amenity-presentation-2023pdf" data-category="oda-karsilama-sunumlari" data-marka="accolink-amenity-presentation" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Accolink Amenity Presentation 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_Mf4ZA.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                 Accolink Amenity Presentation 
+                                          
+                                            </p>
+                                            <span>   Oda Karşılama Sunumları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-bakir-urunler-2022pdf" data-category="" data-marka="bakir-urunler" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Bakır Ürünler - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_iIIrF.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bakır Ürünler 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-bakir-urunler-copper-cookware-by-soy-turkiye-2023pdf" data-category="" data-marka="bakir-urunler-copper-cookware-by-soy-turkiye" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Bakır Ürünler - Copper Cookware by Soy Türkiye - 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_fE4CC.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bakır Ürünler - Copper Cookware by Soy Türkiye 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-bar-professional-2024pdf" data-category="" data-marka="bar-professional" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Bar Professional - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_4UzF3.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bar Professional  
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="" data-category="aksesuarlar" data-marka="bohem" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_xWbBA.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bohem 
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-dokme-demir-cast-iron-cookware-by-hosse-2023pdf" data-category="" data-marka="dokme-demir-hosse" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Dökme Demir - Cast Iron Cookware by Hosse - 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_aAZCu.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                 Dökme Demir -  Hosse 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-dokme-demir-cast-iron-cookware-by-lava-2023pdf" data-category="" data-marka="dokme-demir-lava" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Dökme Demir - Cast Iron Cookware by Lava - 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_cqrPA.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                 Dökme Demir -  Lava 
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-dokme-demir-cast-iron-cookware-by-srl-2024pdf" data-category="aksesuarlar" data-marka="surel-demir" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Dökme Demir - Cast Iron Cookware by SRL - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_x5MPp.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Sürel Demir 
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-pirge-2024pdf" data-category="aksesuarlar" data-marka="pirge" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Pirge - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_aW7lt.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Pirge 
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-staub-2022pdf" data-category="aksesuarlar" data-marka="staub" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Staub - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_yKClg.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Staub  
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-thrill-international-vortex-sbi-2024pdf" data-category="aksesuarlar" data-marka="thrill" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Thrill International - Vortex SBI - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_4qsPW.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Thrill 
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-zwilling-2022pdf" data-category="aksesuarlar" data-marka="zwilling" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Zwilling - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_zi3cd.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Zwilling  
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="07-accolink-endustriyel-gastrometa-by-accolink-2022pdf" data-category="" data-marka="gastrometa" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/07 - Accolink Endüstriyel - GastroMeta by Accolink - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_IeAHZ.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                GastroMeta  
+                                          
+                                            </p>
+                                            <span>    </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="bonna-2024pdf" data-category="tabak-ve-kaseler" data-marka="bonna" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/bonna-2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_mSM8I.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bonna 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="urban-bar-brochure-2024pdf" data-category="bar-ekipmanlari" data-marka="urban-bar" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/Urban Bar Brochure 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_8C1UP.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Urban Bar 
+                                          
+                                            </p>
+                                            <span>   Bar Ekipmanları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-figgjo-2024pdf" data-category="tabak-ve-kaseler" data-marka="figgjo" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Figgjo - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_VkpPd.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Figgjo 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-büfe-la-tavola-banket-servis-ürünleri-2024pdf" data-category="banket-ekipmanlari" data-marka="la-tavola" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - La Tavola Banket Servis Ürünleri - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_M3vVA.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                La Tavola 
+                                          
+                                            </p>
+                                            <span>   Banket Ekipmanları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="05-accolink-aksesuar-thrill-international-2022pdf" data-category="aksesuarlar" data-marka="thrill" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/05 - Accolink Aksesuar - Thrill International - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_e7Sd6.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Thrill 
+                                          
+                                            </p>
+                                            <span>   Aksesuarlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-f2d-2024pdf" data-category="kupalar-ve-fincanlar" data-marka="f2d" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - F2D - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_O8IHK.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                F2D 
+                                          
+                                            </p>
+                                            <span>   Kupalar ve Fincanlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="00-yeni-01-accolink-tabak-id-fine-2024pdf" data-category="kupalar-ve-fincanlar" data-marka="id-fine" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/00 - Yeni - 01 - Accolink Tabak - ID Fine - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_fvpkI.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                ID Fine 
+                                          
+                                            </p>
+                                            <span>   Kupalar ve Fincanlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-hic-ceramics-2024pdf" data-category="kupalar-ve-fincanlar" data-marka="hic-seramik" style="display: none;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Hic Ceramics - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_18VAE.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Hiç seramik 
+                                          
+                                            </p>
+                                            <span>   Kupalar ve Fincanlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-jars-2024pdf" data-category="kupalar-ve-fincanlar" data-marka="jars" style="display: none;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Jars - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_l5x38.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Jars 
+                                          
+                                            </p>
+                                            <span>   Kupalar ve Fincanlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-la-tavola-bone-china-2022pdf" data-category="kupalar-ve-fincanlar" data-marka="la-tavola" style="display: none;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - La Tavola Bone China - 2022.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_ug8H9.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                La Tavola 
+                                          
+                                            </p>
+                                            <span>   Kupalar ve Fincanlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="01-accolink-tabak-le-coq-porcelaine-2024pdf" data-category="kupalar-ve-fincanlar" data-marka="le-coq-porcalaine" style="display: none;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/01 - Accolink Tabak - Le Coq Porcelaine - 2024.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_Si98l.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Le Coq Porcalaine 
+                                          
+                                            </p>
+                                            <span>   Kupalar ve Fincanlar </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="04-accolink-bufe-bohem-2023pdf" data-category="masaustu-aksesuarlari" data-marka="bohem" style="display: none;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/04 - Accolink Büfe - Bohem - 2023.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_IrGG9.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Bohem 
+                                          
+                                            </p>
+                                            <span>   Masaüstü Aksesuarları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="woodpeckerspdf" data-category="acik-bufe-ekipmanlari" data-marka="woodpeckers" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/woodpeckers.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_xNTob.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Woodpeckers 
+                                          
+                                            </p>
+                                            <span>   Açık Büfe Ekipmanları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="woodpeckerspdf" data-category="oda-karsilama-sunumlari" data-marka="woodpeckers" style="display: none;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/woodpeckers.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_H8gGq.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Woodpeckers 
+                                          
+                                            </p>
+                                            <span>   Oda Karşılama Sunumları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="narin-2024-katalogpdf" data-category="masaustu-aksesuarlari" data-marka="narin" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/Narin 2024 KATALOG.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_wID2H.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Narin 
+                                          
+                                            </p>
+                                            <span>   Masaüstü Aksesuarları </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="li-studiopdf" data-category="tabak-ve-kaseler" data-marka="li-studio" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/Li-Studio.pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_qmmmD.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Li Studio 
+                                          
+                                            </p>
+                                            <span>   Tabak ve Kaseler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-4 mb-4 product" data-file="02-accolink-cam-gusto-onis-2025-1pdf" data-category="bardak-ve-kadehler" data-marka="onis" style="display: block;">
+                                    <div class="card">
+                                        <a class="pdf-link" data-file="/images/content/02 - Accolink Cam - Gusto - Onis - 2025 (1).pdf" href="#">
+                                        <img class="card-img-top" src="/images/content/orj_fuGlS.png" alt="">
+                                        <div class="card-body text-center">
+                                            <p class="h6 ">
+                                                Onis 
+                                          
+                                            </p>
+                                            <span>   Bardak ve Kadehler </span>
+                                        </div>
+                                            </a>
+                                    </div>
+                                </div> {% endcomment %}
+                                        
+
+
+                 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block lowerJs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <script>
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    // Django'dan gelen PDF yollarını JavaScript listesine aktar
+    const pdfFiles = {{ catalog_files|safe }};
+
+    // Her PDF için canvas’a ilk sayfayı çiz
+    pdfFiles.forEach((url, index) => {
+        url = "{% static 'katalog/' %}"+url;
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        pdf.getPage(1).then(page => {
+          const scale = 1.0;
+          const viewport = page.getViewport({ scale: scale });
+          const canvas = document.getElementById(`pdf-canvas-${index + 1}`);
+          const context = canvas.getContext('2d');
+
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          const renderContext = { canvasContext: context, viewport: viewport };
+          page.render(renderContext);
+        });
+      }).catch(err => {
+        console.error(`PDF yüklenemedi: ${url}`, err);
+      });
+    });
+  </script>
+{% endblock %}

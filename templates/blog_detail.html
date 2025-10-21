@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ blog.meta_title }} | The Gusto
+{% endblock %}
+{% block meta_desc %}
+{{ blog.meta_description }}
+{% endblock %}
+
+{% block body %}
+<div class="marka-container"> 
+        <div class="container mt-3" id="test-list">
+            <div class="row">
+                <div class="col-md-3 mb-3" style="color: #a3a3a3; font-size: 12px;">
+                    Ana Sayfa &gt; Blog Detayı
+                </div>
+            </div>
+        </div> 
+                </div>
+  
+        {% comment %} ===================================================================== {% endcomment %}
+
+<section id="blog" class="blog blog-grid pt-50 pb-0">
+        <div class="container">
+
+            <div class="row">
+ 
+                <!-- Blog Item #1 -->
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="blog-item">
+
+                        <div class="blog__content">
+                            <div class="blog__meta">
+                                <span id="ContentPlaceHolder1_date" class="blog__meta-date"></span>
+                            </div>
+                            <h1 id="ContentPlaceHolder1_Header" class="blog__title">{{ blog.blog_title }}</h1>
+                            <img src="{{ blog.content_view.url }}" id="ContentPlaceHolder1_logo" style="max-width: 400px; width: 100%; float: right; margin: 0 0px 15px 15px">
+                            <div>
+                            <p id="ContentPlaceHolder1_Spot" class="blog_spot"> </p></div>
+                            <div id="ContentPlaceHolder1_Content" class="blog__desc">
+                                {{ blog.content|safe }}
+                            </div>
+
+                        </div>
+                        <!-- /.entry-content -->
+                    </div>
+                    <!-- /.blog-item -->
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+{% endblock %}
+{% block lowerJs %}
+
+{% endblock %}
