@@ -26,7 +26,7 @@ def cerez(request):
     return render(request,'cerez.html')
 
 def catalog(request):
-    catalog_dir = finders.find('katalog')
+    catalog_dir = os.path.join(settings.STATIC_ROOT, 'katalog')
     if not catalog_dir or not os.path.isdir(catalog_dir):
         files = []
     else:
