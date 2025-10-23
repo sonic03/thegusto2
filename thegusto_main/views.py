@@ -28,10 +28,9 @@ def cerez(request):
 def catalog(request):
     catalog_dir = staticfiles_storage.path('katalog')
     if not os.path.isdir(catalog_dir):
-        files = []
+        files = ['Ndustrio_2024_Katalog.pdf', 'Empero2024_Katalog.pdf']
     else:
         files = [f for f in os.listdir(catalog_dir) if os.path.isfile(os.path.join(catalog_dir, f))]
-
     context = {'catalog_files': files}
     return render(request,'catalog.html',context=context)
 
