@@ -30,7 +30,9 @@ def catalog(request):
     if not os.path.isdir(catalog_dir):
         files = ['Ndustrio_2024_Katalog.pdf', 'Empero2024_Katalog.pdf']
     else:
-        files = [f for f in os.listdir(catalog_dir) if os.path.isfile(os.path.join(catalog_dir, f))]
+        #files = [f for f in os.listdir(catalog_dir) if os.path.isfile(os.path.join(catalog_dir, f))]
+        files = [f for f in os.listdir(catalog_dir)]
+    is_path = os.listdir(catalog_dir)
     context = {'catalog_files': files}
     return render(request,'catalog.html',context=context)
 
