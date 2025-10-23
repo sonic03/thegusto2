@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from datetime import datetime
 import os
-from django.contrib.staticfiles import finders
+from django.contrib.staticfiles.storage import staticfiles_storage
 from django.http import JsonResponse
 import re
 import requests
@@ -26,8 +26,8 @@ def cerez(request):
     return render(request,'cerez.html')
 
 def catalog(request):
-    catalog_dir = os.path.join(settings.STATIC_ROOT, 'katalog')
-    if not catalog_dir or not os.path.isdir(catalog_dir):
+    catalog_dir = staticfiles_storage.path('katalog')
+    if not os.path.isdir(catalog_dir):
         files = []
     else:
         files = [f for f in os.listdir(catalog_dir) if os.path.isfile(os.path.join(catalog_dir, f))]
