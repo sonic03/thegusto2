@@ -1713,6 +1713,19 @@ label.error {
   .nav-split {
     right: 10px;
   }
+  #Logos{
+    height: fit-content;
+  }
+  #newsletter .eform input[type="text"]{
+    min-width: min-content !important;
+  }
+  #Sunumlar{
+    margin-top:1%;
+  }
+  .navbar .navbar-brand{
+    width: 36% !important;
+    margin-top: 2%;
+  }
 }
 
 /*------------------- 
