@@ -229,16 +229,16 @@ Kataloglar | The Gusto
                     <div class="card">
                         <div class="card-body">
                             <div class="row list">
-                                {% for item in catalog_files %}
-
+                                {% for item in cat_files %}
+                                
                                 <div class="col-md-3 mb-3 product" data-category="" data-marka="firma-profili" style="display: block;">
                                     <div class="card">
-                                        <a class="pdf-link" href="{% static 'katalog/'|add:item %}">
+                                        <a class="pdf-link" href="{{ item.url }}" target="_blank">
                                             
                                         <div class="card-body text-center">
-                                            <canvas style="width:200px;height:230px;border:2px solid var(--primary-proj-color); border-radius: 1px; margin-bottom:8%;background: var(--primary-proj-color);padding:5px;" id="pdf-canvas-{{ forloop.counter }}"></canvas>
+                                            
                                             <p class="h6 ">
-                                                {{ item|url_to_name }}
+                                                {{item.text}}
                                           
                                             </p>
                                             <span>    </span>
@@ -1194,35 +1194,4 @@ Kataloglar | The Gusto
 {% endblock %}
 
 {% block lowerJs %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-  <script>
-    const pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    // Django'dan gelen PDF yollarını JavaScript listesine aktar
-    const pdfFiles = {{ catalog_files|safe }};
-
-    // Her PDF için canvas’a ilk sayfayı çiz
-    pdfFiles.forEach((url, index) => {
-        url = "{% static 'katalog/' %}"+url;
-      pdfjsLib.getDocument(url).promise.then(pdf => {
-        pdf.getPage(1).then(page => {
-          const scale = 1.0;
-          const viewport = page.getViewport({ scale: scale });
-          const canvas = document.getElementById(`pdf-canvas-${index + 1}`);
-          const context = canvas.getContext('2d');
-
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
-
-          const renderContext = { canvasContext: context, viewport: viewport };
-          page.render(renderContext);
-        });
-      }).catch(err => {
-        console.error(`PDF yüklenemedi: ${url}`, err);
-      });
-    });
-  </script>
 {% endblock %}

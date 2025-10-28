@@ -14,7 +14,54 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html')
+    not_include = '.DS_Store'
+    if settings.DEBUG:
+        one_cikan_dir = os.path.join(settings.BASE_DIR, 'static', 'img','one_cikan')
+        marka_dir = os.path.join(settings.BASE_DIR, 'static', 'img','markalar')
+        masa_ustu_dir = os.path.join(settings.BASE_DIR, 'static', 'img','masaustu')
+        mutfak_dir = os.path.join(settings.BASE_DIR, 'static', 'img','sira_disi')
+        oda_dir = os.path.join(settings.BASE_DIR, 'static', 'img','oda_sunum')
+    else:
+        one_cikan_dir = staticfiles_storage.path('one_cikan')
+        marka_dir = staticfiles_storage.path('markalar')
+        masa_ustu_dir = staticfiles_storage.path('masaustu')
+        mutfak_dir = staticfiles_storage.path('sira_disi')
+        oda_dir = staticfiles_storage.path('oda_sunum')
+    if not os.path.isdir(one_cikan_dir):
+        files = []
+    else:
+        files = [f for f in os.listdir(one_cikan_dir) if os.path.isfile(os.path.join(one_cikan_dir, f)) and f != not_include]
+    
+    if not os.path.isdir(marka_dir):
+        marka_files = []
+    else:
+        marka_files = [f for f in os.listdir(marka_dir) if os.path.isfile(os.path.join(marka_dir, f))and f != not_include]
+    
+    if not os.path.isdir(masa_ustu_dir):
+        masaustu_files = []
+    else:
+        masaustu_files = [f for f in os.listdir(masa_ustu_dir) if os.path.isfile(os.path.join(masa_ustu_dir, f)) and f != not_include]
+    
+    if not os.path.isdir(mutfak_dir):
+        mutfak_files = []
+    else:
+        mutfak_files = [f for f in os.listdir(mutfak_dir) if os.path.isfile(os.path.join(mutfak_dir, f)) and f != not_include]
+    
+    if not os.path.isdir(oda_dir):
+        oda_files = []
+    else:
+        oda_files = [f for f in os.listdir(oda_dir) if os.path.isfile(os.path.join(oda_dir, f)) and f != not_include]
+    
+    
+
+    context = {
+        'once_cikan_files': files,
+        'markalar':marka_files,
+        'masaustu':masaustu_files,
+        'mutfak_files':mutfak_files,
+        'oda_files':oda_files,
+               }
+    return render(request,'index.html',context=context)
 
 def about(request):
     return render(request,'about.html')
@@ -26,13 +73,51 @@ def cerez(request):
     return render(request,'cerez.html')
 
 def catalog(request):
-    catalog_dir = staticfiles_storage.path('katalog')
+    
+    if settings.DEBUG:
+        catalog_dir = os.path.join(settings.BASE_DIR, 'static','katalog')
+    else:
+        catalog_dir = staticfiles_storage.path('katalog')
     if not os.path.isdir(catalog_dir):
         files = ['Ndustrio_2024_Katalog.pdf', 'Empero2024_Katalog.pdf']
     else:
         files = [f for f in os.listdir(catalog_dir) if os.path.isfile(os.path.join(catalog_dir, f))]
-    
-    context = {'catalog_files': files}
+    cat_files = [
+        {'url':'https://drive.google.com/file/d/1C1G57Q5BTALq5Ti-DK6ybcAStmTEo4mm/view','text':'Yıldız Bakırcılık'},
+        {'url':'https://guralporselen.com.tr/Content/assets/catalog/digibone-2023-small.pdf','text':'Güral Porselen - Horeca Digibone'},
+        {'url':'https://guralporselen.com.tr/Content/assets/catalog/horeca-white-2022.pdf','text':'Güral Porselen - Horeca White'},
+        {'url':'https://guralporselen.com.tr/Content/assets/catalog/horeca-bone-2022.pdf','text':'Güral Porselen Horeca'},
+        {'url':'https://www.lavametal.com.tr/uploads/catalog/Lava-Product-Catalogue.pdf?_gl=1*bgbgt8*_gcl_au*MTc1NzUzNjQ4MC4xNzYxNTc2NDU0','text':'Lava Metal'},
+        {'url':'https://simplebooklet.com/workpad/workpad_download/pdf/3q9HqIuOWi9R36ZgnXcWkd/0/link','text':'NUDE'},
+        {'url':'https://biradli.com.tr/wp-content/uploads/2025/02/BIRADLI-2025.pdf','text':'Biradlı'},
+        {'url':'https://www.abmmutfak.com/katalog.pdf','text':'ABM Mutfak'},
+        {'url':'https://www.pirge.com/catalog/pirge.pdf?srsltid=AfmBOoptkuR39L22zlTQqIb_DKOsm02k7HRAH7BvaMk571FnADXqnzc5','text':'Pirge'},
+        {'url':'https://leaf-vics.com/wp-content/uploads/catalogs/2024/victorinox_catalog_EN_2024.pdf','text':'Victorinox'},
+        {'url':'https://plante.biz/alkan2025.pdf','text':'Alkan'},
+        {'url':'https://drive.google.com/file/d/1xJim6MD3trXbiTpgXbWKmyHjciPCpQkd/view','text':'Peugeout'},
+        {'url':'https://www.robot-coupe.com/robot-coupe-global/Page%20Documentation/Catalogues/TR/Robot-Coupe_2025_Katalog_Turkce_Interactive.pdf','text':'Robot Coupe'},
+        {'url':'https://cancan.com.tr/wp-content/uploads/2025/10/2025-CANCAN-KATALOG-MB-KUCULTULMUS.pdf','text':'Cancan'},
+        {'url':'https://drive.google.com/file/d/1C1G57Q5BTALq5Ti-DK6ybcAStmTEo4mm/view?usp=drive_link','text':'Yıldız Bakırıclık'},
+        {'url':'https://drive.google.com/file/d/1eZsoP_fKv-dmtQRscvpTXJoLdhRKpSrf/view?usp=drive_link', 'text':'Kapp'},
+        {'url':'https://drive.google.com/file/d/1IBB60Nj9jG0mnuFY58f_daEIdmRfd1Bq/view?usp=drive_link', 'text':'Samixir'},
+        {'url':'https://drive.google.com/file/d/1klbyKNOFfeaEc6y5qTjZR1l5urE8K7ZG/view?usp=drive_link', 'text':'Remta'},
+        {'url':'https://drive.google.com/file/d/15ZHFLW66irY4CD6ia_hhAyYwaerhIlq9/view?usp=drive_link', 'text':'Paşabahçe Retail'},
+        {'url':'https://drive.google.com/file/d/1NfdrYYjnARrX0h2nE1xCpQVk0bdXg2bz/view?usp=drive_link', 'text':'Paşabahçe Hospitality'},
+        {'url':'https://drive.google.com/file/d/1EimmPxplrJHFxGMph8mIE4eswFpESQ-v/view?usp=drive_link', 'text':'Narin'},
+        {'url':'https://drive.google.com/file/d/1Nrw9wrB3uG7ImEh5YUxUh8vIBsL2-PeA/view?usp=drive_link', 'text':'Mateka'},
+        {'url':'https://drive.google.com/file/d/10-NYDnTlC3E2XKNwyi2Fl5Ehl1YebNky/view?usp=drive_link', 'text':'Lugga'},
+        {'url':'https://drive.google.com/file/d/1HW5BjYohZ5ysh_cIWVC8AT9BK-f3ZIPT/view?usp=drive_link', 'text':'Jumbo'},
+        {'url':'https://drive.google.com/file/d/1wy5taZ39EBKa3vRWM2elUQutphVXhkTe/view?usp=drive_link', 'text':'Iceinox'},
+        {'url':'https://drive.google.com/file/d/1Y300jOnQlj2cw5M3ctX--oFjZ2hDbjhT/view?usp=drive_link', 'text':'Gastrotech'},
+        {'url':'https://drive.google.com/file/d/1ubLvaPGmA519wtSuBPzKmuk0cHDdb6Yo/view?usp=drive_link','text':'Fantom'},
+        {'url':'https://drive.google.com/file/d/19m0M9PQsSMb0mpTPI9QFSpqFhDk59NbK/view?usp=drive_link', 'text':'By Bone'},
+        {'url':'https://drive.google.com/file/d/1CJ1nWxz2J69nnuUNqJgARkX_pOc2W2H5/view?usp=drive_link', 'text':'Bosfor'},
+        {'url':'https://drive.google.com/file/d/1k7fQMsHoEV3QJxyCBfoub4WXeeYgmuuS/view?usp=drive_link', 'text':'Atalay'},
+        {'url':'https://drive.google.com/file/d/1aDz38ilkXxuo9cvJlN2WaO3OL9iYOwcZ/view?usp=drive_link', 'text':'Atalay - Yerli'},
+        {'url':'https://drive.google.com/file/d/1Q8oM4t44i1TlwKLfXoYDtmh5XHypUVz8/view?usp=drive_link', 'text':'Senox'},
+        {'url':'https://drive.google.com/file/d/1Gp_mdHTNhnuhLNSvQBkhZr5XzZlcRP7c/view?usp=drive_link','text':'Epinox'}
+        ]
+    context = {'catalog_files': files,'cat_files':cat_files}
     return render(request,'catalog.html',context=context)
 
 def contact(request):
