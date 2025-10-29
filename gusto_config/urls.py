@@ -18,6 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from thegusto_main.views import *
 from django.conf.urls.static import static
+from django.contrib import sitemaps
+from django.contrib.sitemaps.views import sitemap
+
+sitemaps_dict = {
+    'static': StaticViewSitemap,
+    'blog': BlogSitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +39,7 @@ urlpatterns = [
     path('blog/',blogs,name='blogs'),
     path('blogs/<slug:slug>',blog_detail,name='blog_detail'),
     path('send_main/',send_main,name='send_main'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps_dict}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
