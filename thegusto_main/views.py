@@ -92,8 +92,8 @@ def catalog(request):
     cat_files = [
         {'url':'https://drive.google.com/file/d/1C1G57Q5BTALq5Ti-DK6ybcAStmTEo4mm/view','text':'Yıldız Bakırcılık','img':add_katalog('yildiz')},
         {'url':'https://guralporselen.com.tr/Content/assets/catalog/digibone-2023-small.pdf','text':'Güral Porselen - Horeca Digibone','img':add_katalog('gural')},
-        {'url':'https://guralporselen.com.tr/Content/assets/catalog/horeca-white-2022.pdf','text':'Güral Porselen - Horeca White','img':add_katalog('gural')},
-        {'url':'https://guralporselen.com.tr/Content/assets/catalog/horeca-bone-2022.pdf','text':'Güral Porselen Horeca','img':add_katalog('gural')},
+        {'url':'https://guralporselen.com.tr/Content/assets/catalog/horeca-white-2022.pdf','text':'Güral Porselen - Horeca White','img':add_katalog('gural_white')},
+        {'url':'https://guralporselen.com.tr/Content/assets/catalog/horeca-bone-2022.pdf','text':'Güral Porselen Horeca','img':add_katalog('gural_porselen')},
         {'url':'https://www.lavametal.com.tr/uploads/catalog/Lava-Product-Catalogue.pdf?_gl=1*bgbgt8*_gcl_au*MTc1NzUzNjQ4MC4xNzYxNTc2NDU0','text':'Lava Metal','img':add_katalog('lava')},
         {'url':'https://simplebooklet.com/workpad/workpad_download/pdf/3q9HqIuOWi9R36ZgnXcWkd/0/link','text':'NUDE','img':add_katalog('nude')},
         {'url':'https://biradli.com.tr/wp-content/uploads/2025/02/BIRADLI-2025.pdf','text':'Biradlı','img':add_katalog('biradli')},
@@ -119,7 +119,7 @@ def catalog(request):
         {'url':'https://drive.google.com/file/d/19m0M9PQsSMb0mpTPI9QFSpqFhDk59NbK/view?usp=drive_link', 'text':'By Bone','img':add_katalog('bybone')},
         {'url':'https://drive.google.com/file/d/1CJ1nWxz2J69nnuUNqJgARkX_pOc2W2H5/view?usp=drive_link', 'text':'Bosfor','img':add_katalog('bosfor')},
         {'url':'https://drive.google.com/file/d/1k7fQMsHoEV3QJxyCBfoub4WXeeYgmuuS/view?usp=drive_link', 'text':'Atalay','img':add_katalog('atalay')},
-        {'url':'https://drive.google.com/file/d/1aDz38ilkXxuo9cvJlN2WaO3OL9iYOwcZ/view?usp=drive_link', 'text':'Atalay - Yerli','img':add_katalog('atalay')},
+        {'url':'https://drive.google.com/file/d/1aDz38ilkXxuo9cvJlN2WaO3OL9iYOwcZ/view?usp=drive_link', 'text':'Atalay - Yerli','img':add_katalog('atalay_yerli')},
         {'url':'https://drive.google.com/file/d/1Q8oM4t44i1TlwKLfXoYDtmh5XHypUVz8/view?usp=drive_link', 'text':'Senox','img':add_katalog('senox')},
         {'url':'https://drive.google.com/file/d/1Gp_mdHTNhnuhLNSvQBkhZr5XzZlcRP7c/view?usp=drive_link','text':'Epinox','img':add_katalog('epinox')}
         ]

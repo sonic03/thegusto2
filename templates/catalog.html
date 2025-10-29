@@ -5,6 +5,13 @@
 {% block title %}
 Kataloglar | The Gusto
 {% endblock %}
+{% block css %}
+<style>
+    .shadown{
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+</style>
+{% endblock %}
 
 {% block body %}
 <div class="marka-container">
@@ -50,12 +57,14 @@ Kataloglar | The Gusto
                                         <a class="pdf-link" href="{{ item.url }}" target="_blank">
                                             
                                         <div class="card-body text-center">
-                                            <img src="{% static 'katalog/'|add:item.img %}">
+                                            <img class="card-img-top shadown" src="{% static 'katalog/'|add:item.img %}">
+                                            <div class="card-body text-center">
                                             <p class="h6 ">
                                                 {{item.text}}
                                           
                                             </p>
                                             <span>    </span>
+                                        </div>
                                         </div>
                                             </a>
                                     </div>
