@@ -24,11 +24,11 @@ def index(request):
         mutfak_dir = os.path.join(settings.BASE_DIR, 'static', 'img','sira_disi')
         oda_dir = os.path.join(settings.BASE_DIR, 'static', 'img','oda_sunum')
     else:
-        one_cikan_dir = staticfiles_storage.path('one_cikan')
-        marka_dir = staticfiles_storage.path('markalar')
-        masa_ustu_dir = staticfiles_storage.path('masaustu')
-        mutfak_dir = staticfiles_storage.path('sira_disi')
-        oda_dir = staticfiles_storage.path('oda_sunum')
+        one_cikan_dir = staticfiles_storage.path('img/one_cikan')
+        marka_dir = staticfiles_storage.path('img/markalar')
+        masa_ustu_dir = staticfiles_storage.path('img/masaustu')
+        mutfak_dir = staticfiles_storage.path('img/sira_disi')
+        oda_dir = staticfiles_storage.path('img/oda_sunum')
     if not os.path.isdir(one_cikan_dir):
         files = []
     else:
