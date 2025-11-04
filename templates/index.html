@@ -467,7 +467,7 @@
             </div>
           </div>
         </div>
-        <div class="row mt-5">
+        {% comment %} <div class="row mt-5">
           <div class="col-sm-12 col-md-6 col-lg-6 galeri2">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-rtl" data-aos-duration="1000">
               <div class="swiper-wrapper" id="swiper-wrapper-c8c8c9f633f9a213" aria-live="polite" style="transform: translate3d(1060px, 0px, 0px); transition-duration: 0ms;">
@@ -491,15 +491,9 @@
               <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">The Gusto, otel ve restoran büfelerinizi estetik ve düzenin buluştuğu alanlara dönüştürür. Özenle tasarlanan büfe sunum ürünlerimiz, yemeklerinizi sadece sergilemekle kalmaz, aynı zamanda misafirlerinize unutulmaz bir görsel deneyim yaşatır. Şıklığı, dayanıklılığı ve fonksiyonelliği bir araya getiren The Gusto koleksiyonları, her konseptteki büfeye zarafet katar. Fark yaratmak ve sunumlarınızı bir adım öteye taşımak için The Gusto’nun özel tasarımlarını keşfedin.</p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         <div class="row mt-5">
-          <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="pl-5 pr-5">
-              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Endüstriyel Mutfak <span>Çözümleri</span></h3>
-              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Endüstriyel mutfak projeleri, işi ciddiye alan profesyonellerin gizli kahramanı. Her detay, hız, hijyen ve verimlilik için tasarlanıyor. İster küçük bir kafe olun ister büyük bir restoran, mutfağınız sizin tarzınızı yansıtmalı. Biz de tam burada devreye giriyoruz — mutfağınızı hayalden gerçeğe dönüştürüyoruz.</p>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 galeri1">
+          <div class="col-sm-12 col-md-6 col-lg-6 galeri2">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" data-aos-duration="1000">
               <div class="swiper-wrapper" id="swiper-wrapper-0a62b1210ba3d01bf" aria-live="polite" style="transform: translate3d(-1060px, 0px, 0px); transition-duration: 0ms;">
                 {% for file in mutfak_files %}
@@ -515,9 +509,22 @@
               <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
           </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="pl-5 pr-5">
+              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Endüstriyel Mutfak <span>Çözümleri</span></h3>
+              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Endüstriyel mutfak projeleri, işi ciddiye alan profesyonellerin gizli kahramanı. Her detay, hız, hijyen ve verimlilik için tasarlanıyor. İster küçük bir kafe olun ister büyük bir restoran, mutfağınız sizin tarzınızı yansıtmalı. Biz de tam burada devreye giriyoruz — mutfağınızı hayalden gerçeğe dönüştürüyoruz.</p>
+            </div>
+          </div>
+          
         </div>
         <div class="row mt-5">
-          <div class="col-sm-12 col-md-6 col-lg-6 galeri2">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div style="padding: 50px">
+              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Oda <span>Sunumları</span></h3>
+              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Misafirlerinize konforlu ve şık bir konaklama deneyimi sunmak için oda sunumlarınızın önemi büyük. The Gusto, otel odalarınız için özenle seçilmiş ürünler sunuyor. Yüksek kaliteli tekstil ürünlerinden şık oda aksesuarlarına kadar geniş bir yelpazede ürünlerimizle misafirlerinizi memnun edin. The Gusto'nun oda sunumları koleksiyonunu inceleyin ve misafirlerinize ev konforunda bir konaklama deneyimi yaşatın.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 galeri1">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-rtl" data-aos-duration="1000">
               <div class="swiper-wrapper" id="swiper-wrapper-5bc0ecff0ac68ba7" aria-live="polite" style="transform: translate3d(1060px, 0px, 0px); transition-duration: 0ms;">
                 {% for oda in oda_files %}
@@ -533,12 +540,7 @@
               <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6">
-            <div style="padding: 50px">
-              <h3 data-aos="fade-up" data-aos-duration="1000" class="aos-init">Oda <span>Sunumları</span></h3>
-              <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">Misafirlerinize konforlu ve şık bir konaklama deneyimi sunmak için oda sunumlarınızın önemi büyük. The Gusto, otel odalarınız için özenle seçilmiş ürünler sunuyor. Yüksek kaliteli tekstil ürünlerinden şık oda aksesuarlarına kadar geniş bir yelpazede ürünlerimizle misafirlerinizi memnun edin. The Gusto'nun oda sunumları koleksiyonunu inceleyin ve misafirlerinize ev konforunda bir konaklama deneyimi yaşatın.</p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
