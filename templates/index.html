@@ -389,7 +389,7 @@
       <div id="logolist" class="swiper-wrapper" aria-live="off">
         {% for marka in markalar %}
         <div class="swiper-slide aos-init" data-aos-duration="1000" data-aos-delay="500" data-swiper-slide-index="0" role="group" aria-label="1 / 24">
-          <a href="javascript:void(0)">
+          <a href="{% url 'catalog' %}">
             <img class="card-img-top" src="{% static 'img/markalar/'|add:marka %}" alt="" />
             </a>
         </div>
