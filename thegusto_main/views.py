@@ -249,10 +249,10 @@ class BlogSitemap(Sitemap):
     priority = 0.9
 
     def items(self):
-        return Blog.objects.filter(is_active=True)
+        return Blog.objects.all()
 
     def lastmod(self, obj):
-        return obj.updated_at
+        return obj.created_at
     
 
 def gallery(request):
