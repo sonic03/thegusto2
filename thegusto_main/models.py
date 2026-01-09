@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 # Create your models here.
 
@@ -18,9 +19,13 @@ class Blog(models.Model):
     content_view = models.ImageField(upload_to='blog_images/',null=False,blank=False)
     is_active = models.BooleanField(default=True)
     slug = models.CharField(verbose_name='slug',max_length=500)
+    updated_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.blog_title
+    def get_absolute_url(self):
+        return reverse("blog_detail", kwargs={"slug": self.slug})
+    
     
 class GaleryImgs(models.Model):
     meta_alt = models.CharField(verbose_name='meta_alt',max_length=500)
