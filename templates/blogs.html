@@ -4,7 +4,31 @@
 {% block title %}
 Blog Yazılarımız | The Gusto
 {% endblock %}
+{% block css %}
+<style>
+    .flexmasonry {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        
+    }
+    .item{
+        width:33%;
+        float:left;
+    }
+    @media only screen and (max-width: 600px){
+        .item{
+        width:100%;
+        float:left;
+    }
+    .flexmasonry{
+        flex-wrap: wrap;
+    flex-direction: column;
+    }
+    }
+</style>
 
+{% endblock %}
 {% block body %}
 <div class="marka-container"> 
         <div class="container mt-3" id="test-list">

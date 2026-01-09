@@ -7,7 +7,25 @@
 {% block meta_desc %}
 {{ blog.meta_description }}
 {% endblock %}
-
+{% block css %}
+<style>
+    .retBt{
+        border-radius: 25px;
+        width: 31% !important;
+        padding: 1% !important;
+        margin: 3% 35%;
+        font-size: 25px !important;
+    }
+    @media only screen and (max-width: 600px){
+        .retBt{
+            width: 100% !important;
+            padding: 1% !important;
+            margin: 3% 0;
+            font-size: 25px !important;
+        }
+    }
+</style>
+{% endblock %}
 {% block body %}
 <div class="marka-container"> 
         <div class="container mt-3" id="test-list">
@@ -45,8 +63,14 @@
                         </div>
                         <!-- /.entry-content -->
                     </div>
+        
                     <!-- /.blog-item -->
+                     <div class='col-md-12'>
+                        <a href="{% url 'blogs' %}" class="btn btn__primary retBt" style="line-height: 28px">Bloglara Dön</a>
+                     </div>
+                     
                 </div>
+
                 <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
