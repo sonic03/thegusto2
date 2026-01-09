@@ -1,0 +1,10 @@
+{% for image in galeri_imgs %}
+                    <a href="{{ image.image.url }}" class="gallery-item" title="{{ image.meta_alt }}" data-aos="fade-up" data-aos-duration="1000">   
+                    
+                        <img src="{{ image.image.url }}" loading='lazy' alt="{{ image.meta_alt }}">
+                        <div class="item-overlay">
+                            <span>İNCELE</span>
+                        </div>
+                    </a>
+                
+                    {% endfor %}

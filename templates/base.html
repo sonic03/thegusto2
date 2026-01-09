@@ -406,35 +406,23 @@ function __doPostBack(eventTarget, eventArgument) {
 
             $(document).ready(function () {
 
-                $("#src").click(function () {
-                    var url = $("#key").val();
-                    window.location.href = "/urunler.aspx?keyword=" + url;
-                });
-
-                $('.search__input').keypress(function (e) {
-                    if (e.which == 13) {
-                        var url = $("#key").val();
-                        window.location.href = "/urunler.aspx?keyword=" + url;
-                        return false;
-                    }
-                });
-
+                
                 function isMobile() {
                     return window.innerWidth < 992;
                 }
 
                 const dropdownLink = document.querySelector(".limarka .dropdown-toggle");
 
-                function updateDropdown() {
+                {% comment %} function updateDropdown() {
                     if (isMobile()) {
                         dropdownLink.setAttribute("data-toggle", "dropdown");
                     } else {
                         dropdownLink.removeAttribute("data-toggle");
                     }
-                }
+                } {% endcomment %}
 
-                {% comment %} updateDropdown(); {% endcomment %}
-                window.addEventListener("resize", updateDropdown);
+                {% comment %} updateDropdown(); 
+                window.addEventListener("resize", updateDropdown);{% endcomment %}
 
             });
 

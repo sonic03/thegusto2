@@ -40,6 +40,8 @@ urlpatterns = [
     path('blogs/<slug:slug>',blog_detail,name='blog_detail'),
     path('send_main/',send_main,name='send_main'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps_dict}, name='django.contrib.sitemaps.views.sitemap'),
+    path('gallery/',gallery,name='gallery'),
+    path('gallery_ajax/',gallery_ajax,name='gallery_ajax')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

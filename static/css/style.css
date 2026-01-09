@@ -1724,7 +1724,7 @@ label.error {
   }
   .navbar .navbar-brand{
     width: 36% !important;
-    margin-top: 2%;
+    margin-top: -6% !important;
   }
 }
 

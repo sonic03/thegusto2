@@ -12,6 +12,7 @@ from .models import *
 from django.shortcuts import get_object_or_404
 from django.contrib.sitemaps import Sitemap
 from django.shortcuts import reverse
+from django.template.loader import render_to_string
 
 # Create your views here.
 
@@ -238,7 +239,7 @@ class StaticViewSitemap(Sitemap):
     changefreq = 'weekly'
 
     def items(self):
-        return ['index', 'about', 'contact','catalog']
+        return ['index', 'about', 'contact','catalog','gallery']
 
     def location(self, item):
         return reverse(item)
@@ -252,3 +253,22 @@ class BlogSitemap(Sitemap):
 
     def lastmod(self, obj):
         return obj.updated_at
+    
+
+def gallery(request):
+    content = {}
+    return render(request,'galeri.html',context=content)
+
+def gallery_ajax(request):
+    is_ajax = request.headers.get('x-requested-with') == 'XMLHttpRequest'
+    if is_ajax:
+        page = int(request.GET.get('page', 1))
+        results_per_page = 8
+        start = (page - 1) * results_per_page
+        end = start + results_per_page
+
+        galeri_imgs = GaleryImgs.objects.all().order_by('-priority')[start:end]
+
+        html = render_to_string('partial-gallery.html', {'galeri_imgs': galeri_imgs})
+
+        return JsonResponse({'html': html})

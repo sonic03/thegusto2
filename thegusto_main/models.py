@@ -21,3 +21,10 @@ class Blog(models.Model):
     
     def __str__(self):
         return self.blog_title
+    
+class GaleryImgs(models.Model):
+    meta_alt = models.CharField(verbose_name='meta_alt',max_length=500)
+    image = models.ImageField(verbose_name='resim',upload_to='galery/')
+    priority = models.IntegerField(verbose_name='siralama',default=9999999)
+    def __str__(self):
+        return self.meta_alt

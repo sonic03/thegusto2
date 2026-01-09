@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+The Gusto Dünyası | Seçkin Züccaciye ve Yaşam Tasarım Mağazası
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Magnific-Popup/1.1.0/magnific-popup.min.css">
+    <style>
+
+        .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.5s ease;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item:hover img {
+    scale: 1.1;
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+.item-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+.item-overlay span {
+    background: #D6B87A;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family:"Montserrat", sans-serif;
+}
+
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="kurumsal-container">
+        <div class="image-container aos-init aos-animate" data-aos="fade" data-aos-duration="1000">
+            <img src="{% static 'img/galeri.jpg' %}" style="width: 100%" alt="the gusto">
+            <div class="overlay-text">The GUSTO Dünyası</div>
+        </div>
+
+    </div>
+<div id="kurumsal-detay">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-12">
+                    <h1 data-aos="fade-up" data-aos-duration="1000" class="aos-init"><span>
+                        Seçkin Züccaciye ve Yaşam Tarzı Koleksiyonu</span> The Gusto Dünyası
+
+                    </h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" class="aos-init">
+                     The Gusto, kaliteli dekorasyon çözümlerini ve seçkin yaşam ürünlerini modern bir deneyimle buluşturuyor. Sofra sanatından ev aksesuarlarına kadar uzanan geniş yelpazemizdeki her parça, özenle seçilmiş tasarım koleksiyonlarımızı ve markamızın detaylara verdiği önemi yansıtıyor.</p>
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="1000" class="aos-init" style="font-size:41px;" >Estetik Dokunuşlarla Yaşam Alanlarınızı Yeniden Keşfedin</h2>
+                     <p data-aos="fade-up" data-aos-duration="1200" class="aos-init">
+                    Galerimizde inceleyeceğiniz her görsel; tasarım ürünlerimizle kurduğumuz bağın, mağazamızın samimi atmosferinin ve sizin için yarattığımız özel alışveriş deneyiminin birer yansımasıdır.
+                    </p>
+                    <p data-aos="fade-up" data-aos-duration="1300" class="aos-init">
+          
+
+                        The Gusto’da alışveriş; sadece ihtiyaçları karşılamak değil; ilham verici objeleri keşfetmek ve yaşam alanlarınıza estetik dokunuşlar katarak stilinizi yansıtmaktır. Sofra sunumlarınızdan dekoratif detaylara kadar her noktada fark yaratan, özgün bir dünyaya davetlisiniz.
+                    </p>
+            </div>
+            <div class="col-md-12">
+                
+                <div class="gallery-container" id="gallery-wrapper">
+                    
+                </div>
+                <div id="loader" style="text-align:center; padding: 20px; display:none;">
+                    <span>Yükleniyor...</span>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+     
+{% endblock %}
+{% block lowerJs %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Magnific-Popup/1.1.0/magnific-popup.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Magnific-Popup/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    AOS.init();
+    let page = 1;
+let emptyPage = false;
+let blockRequest = false;
+    $(document).ready(function() {
+        loadImages();
+
+    // Scroll takibi
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > $(document).height() - $(window).height() - 200 && !blockRequest && !emptyPage) {
+            blockRequest = true;
+            page++;
+            loadImages();
+        }
+    });
+
+    // Magnific Popup Başlatma (Delegation kullanarak)
+    $('#gallery-wrapper').magnificPopup({
+        delegate: 'a', 
+        type: 'image',
+        gallery: { enabled: true },
+        zoom: { enabled: true, duration: 300 }
+    });
+    });
+    function loadImages() {
+    $('#loader').show();
+    $.ajax({
+        url: '{% url "gallery_ajax" %}' + '?page='+page,
+        type: 'GET',
+        success: function(data) {
+            if (data.html === '') {
+                emptyPage = true;
+                $('#loader').hide();
+            } else {
+                blockRequest = false;
+                $('#loader').hide();
+                // Gelen HTML'i galeriye ekle
+                $('#gallery-wrapper').append(data.html);
+            }
+        }
+    });
+}
+
+</script>
+
+{% endblock %}
+
