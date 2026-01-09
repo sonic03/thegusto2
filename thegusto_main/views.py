@@ -267,7 +267,7 @@ def gallery_ajax(request):
         start = (page - 1) * results_per_page
         end = start + results_per_page
 
-        galeri_imgs = GaleryImgs.objects.all().order_by('-priority')[start:end]
+        galeri_imgs = GaleryImgs.objects.all().order_by('priority')[start:end]
 
         html = render_to_string('partial-gallery.html', {'galeri_imgs': galeri_imgs})
 
