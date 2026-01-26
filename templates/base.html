@@ -312,6 +312,50 @@ function __doPostBack(eventTarget, eventArgument) {
             });
 
         </script>
+        <script>
+            var Swipes = new Swiper('.insta .swiper-container', {
+                loop: true,
+                breakpoints: {
+                    // büyük eşit >= 320px
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+                    // büyük eşit >= 640
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    // büyük eşit >= 768px
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    // büyük eşit >= 992px
+                    992: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    // büyük eşit >= 1200px
+                    1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                    // büyük eşit >= 1400px
+                    1400: {
+                        slidesPerView: 5,
+                        spaceBetween: 5
+                    },
+                },
+                navigation: {
+                    nextEl: "#dcninsta .next",
+                    prevEl: "#dcninsta  .prev"
+                }
+
+            });
+
+        </script>
+        </script>
         <script type="text/javascript"> 
 
             var Swipes = new Swiper('.onecikanlar .swiper-container', {

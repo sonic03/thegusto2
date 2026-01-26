@@ -13,6 +13,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.sitemaps import Sitemap
 from django.shortcuts import reverse
 from django.template.loader import render_to_string
+from django.core.cache import cache
 
 # Create your views here.
 
@@ -56,14 +57,33 @@ def index(request):
         oda_files = [f for f in os.listdir(oda_dir) if os.path.isfile(os.path.join(oda_dir, f)) and f != not_include]
     
     
-
+    access_token = settings.INSTA_TOKEN
+    
+    # 1. Önce önbelleğe bak (Siteyi yavaşlatmamak için)
+    posts = cache.get('insta_posts')
+    
+    if not posts:
+        # 2. Eğer cache boşsa Instagram'a git
+        # 2026 güncel endpoint:
+        url = f"https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp&access_token={access_token}"
+        
+        try:
+            response = requests.get(url, timeout=10)
+            data = response.json()
+            posts = data.get('data', [])
+            
+            # 3. Veriyi 2 saatliğine sakla (7200 saniye)
+            cache.set('insta_posts', posts, 7200)
+        except Exception as e:
+            print(f"Hata: {e}")
+            posts = []
     context = {
         'once_cikan_files': files,
         'markalar':marka_files,
         'masaustu':masaustu_files,
         'mutfak_files':mutfak_files,
         'oda_files':oda_files,
-               }
+        'posts':posts       }
     return render(request,'index.html',context=context)
 
 def about(request):

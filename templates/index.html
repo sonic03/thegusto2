@@ -10,6 +10,70 @@
 {% endblock %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/toastr.css' %}" />
+<style>
+    .insta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+    .insta-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    .insta-item:hover {
+        transform: scale(1.02);
+    }
+    .insta-item img, .insta-item video {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    video{
+      width: 100%;
+      max-height: 445px;
+      object-fit: cover;
+    }
+    .caption-overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    .insta .swiper-container .swiper-wrapper{
+      height:48% !important;
+    }
+    #dcninsta a i img{
+      width:47px;
+    }
+    #dcninsta{
+      top: 50%;
+      width: 98%;
+      display: flex;
+      justify-content: space-between;
+      right: 49px;
+    }
+    .instatext{
+      text-align:center;
+      margin-top:1%;
+      font-style: italic;
+      font-weight:500;
+      font-size:19px;
+    }
+    @media screen and (max-width:767px){
+      .insta .swiper-container .swiper-wrapper {
+          height: 7% !important;
+      }
+      #dcninsta{
+        display: none;
+      }
+    }
+</style>
 {% endblock %}
 {% block body %}
   <section id="slider" class="slider d-sm-block d-none">
@@ -1064,6 +1128,34 @@
     </div>
     <!-- /.container -->
   </section>
+  <section id="instagram">
+    <div class="col-sm-12 col-md-12 col-lg-12 insta">
+            <div data-aos="fade-up" data-aos-duration="1000" class="aos-init aos-animate">
+              <p class='instatext'>Kampanyaları kaçırmamak için  <a href="https://www.instagram.com/thegustoayvalik/" target="_blank">@thegustoayvalik</a></p>
+              </div>
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" data-aos-duration="1000">
+              <div class="swiper-wrapper " id="swiper-wrapper-insta" aria-live="polite" style="transform: translate3d(-1060px, 0px, 0px); transition-duration: 0ms;">
+                {% for post in posts %}
+                <div class="swiper-slide aos-init " data-swiper-slide-index="1" role="group" aria-label="2 / 3">
+                  {% if post.media_type == "VIDEO" %}
+                    <video src="{{ post.media_url }}" muted autoplay loop></video>
+                {% elif post.media_type == "CAROUSEL_ALBUM" or post.media_type == "IMAGE" %}
+                    <img src="{{ post.media_url }}" alt="{{ post.caption }}">
+                {% endif %}
+                </div>
+                {% endfor %}
+              </div>
+              <div id="dcninsta" class="customNavigation">
+                <a class="btn prev" href="#" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0a62b1210ba3d01bf"><i class="gg-arrow-left-o"><img src="{% static 'img/arrow-left.png' %}" alt="" /></i></a>
+                <a class="btn next" href="#" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0a62b1210ba3d01bf"><i class="gg-arrow-right-o"><img src="{% static 'img/arrow-right.png' %}" alt="" /></i></a>
+              </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+          </div>
+    
+    
+  </section>
+  
 {% endblock %}
 {% block lowerJs %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
