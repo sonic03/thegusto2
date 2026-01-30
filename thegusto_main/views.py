@@ -71,7 +71,6 @@ def index(request):
             response = requests.get(url, timeout=10)
             data = response.json()
             posts = data.get('data', [])
-            
             # 3. Veriyi 2 saatliğine sakla (7200 saniye)
             cache.set('insta_posts', posts, 7200)
         except Exception as e:
@@ -272,7 +271,7 @@ class BlogSitemap(Sitemap):
         return Blog.objects.all()
 
     def lastmod(self, obj):
-        return obj.created_at
+        return obj.updated_at
     
 
 def gallery(request):
